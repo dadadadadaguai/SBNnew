@@ -467,7 +467,7 @@ def load_with_single_gpu(model_path):
 def main():
     parser = argparse.ArgumentParser(description="Train scrip")
     parser.add_argument('--model_dir', type=str, default="savemodel/", help='model path prefix')
-    parser.add_argument('--device', type=str, default="cuda", help='cuda or cpu')
+    parser.add_argument('--device', type=str, default="cpu", help='cuda or cpu')
     parser.add_argument("--init_model", default="pretrained_models/bert-base-uncased", type=str, required=False,help="Initial model.")
     parser.add_argument("--init_vocab", default="pretrained_models/bert-base-uncased", type=str, required=False,help="Initial vocab.")
 
@@ -490,7 +490,7 @@ def main():
                         help="")
     parser.add_argument("--dataset", default="lap14", type=str, choices=["lap14", "res14", "res15", "res16"],
                         help="specify the dataset")
-    parser.add_argument('--mode', type=str, default="test", choices=["train", "test"], help='option: train, test')
+    parser.add_argument('--mode', type=str, default="train", choices=["train", "test"], help='option: train, test')
     '''对相似Span进行attention'''
     # 分词中仅使用结果的首token
     parser.add_argument("--Only_token_head", default=False)

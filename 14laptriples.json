@@ -1,0 +1,295 @@
+[
+    {
+        "sentence": "I am pleased with the fast log on , speedy WiFi connection and the long battery life ( > 6 hrs ) .",
+        "triple_list_gold": [
+            [
+                "wifi connection",
+                "speedy",
+                "positive"
+            ],
+            [
+                "log on",
+                "pleased",
+                "positive"
+            ],
+            [
+                "battery life",
+                "pleased",
+                "positive"
+            ],
+            [
+                "wifi connection",
+                "pleased",
+                "positive"
+            ],
+            [
+                "log on",
+                "fast",
+                "positive"
+            ],
+            [
+                "battery life",
+                "long",
+                "positive"
+            ]
+        ],
+        "triple_list_pred": [
+            [
+                "battery life",
+                "pleased",
+                "positive"
+            ],
+            [
+                "log",
+                "pleased",
+                "positive"
+            ]
+        ],
+        "new": [
+            [
+                "log",
+                "pleased",
+                "positive"
+            ]
+        ],
+        "lack": [
+            [
+                "wifi connection",
+                "speedy",
+                "positive"
+            ],
+            [
+                "log on",
+                "pleased",
+                "positive"
+            ],
+            [
+                "wifi connection",
+                "pleased",
+                "positive"
+            ],
+            [
+                "log on",
+                "fast",
+                "positive"
+            ],
+            [
+                "battery life",
+                "long",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "sentence": "I have had it over a year now with out a Glitch of any kind..I love the lit up keys and screen display ... this thing is Fast and clear as can be .",
+        "triple_list_gold": [
+            [
+                "lit up keys",
+                "clear",
+                "positive"
+            ],
+            [
+                "lit up keys",
+                "love",
+                "positive"
+            ],
+            [
+                "screen display",
+                "fast",
+                "positive"
+            ],
+            [
+                "screen display",
+                "love",
+                "positive"
+            ],
+            [
+                "screen display",
+                "clear",
+                "positive"
+            ],
+            [
+                "lit up keys",
+                "fast",
+                "positive"
+            ]
+        ],
+        "triple_list_pred": [
+            [
+                "display",
+                "fast",
+                "positive"
+            ],
+            [
+                "display",
+                "love",
+                "positive"
+            ],
+            [
+                "keys",
+                "fast",
+                "positive"
+            ]
+        ],
+        "new": [
+            [
+                "display",
+                "fast",
+                "positive"
+            ],
+            [
+                "display",
+                "love",
+                "positive"
+            ],
+            [
+                "keys",
+                "fast",
+                "positive"
+            ]
+        ],
+        "lack": [
+            [
+                "lit up keys",
+                "clear",
+                "positive"
+            ],
+            [
+                "lit up keys",
+                "love",
+                "positive"
+            ],
+            [
+                "screen display",
+                "fast",
+                "positive"
+            ],
+            [
+                "screen display",
+                "love",
+                "positive"
+            ],
+            [
+                "screen display",
+                "clear",
+                "positive"
+            ],
+            [
+                "lit up keys",
+                "fast",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "sentence": "also ... - excellent operating system -- size and weight for optimal mobility -- excellent durability of the battery -- the functions provided by the trackpad is unmatched by any other brand-",
+        "triple_list_gold": [
+            [
+                "mobility",
+                "optimal",
+                "positive"
+            ],
+            [
+                "operating system",
+                "excellent",
+                "positive"
+            ],
+            [
+                "durability of the battery",
+                "excellent",
+                "positive"
+            ],
+            [
+                "functions provided by the trackpad",
+                "unmatched",
+                "positive"
+            ],
+            [
+                "size",
+                "excellent",
+                "positive"
+            ],
+            [
+                "weight",
+                "excellent",
+                "positive"
+            ]
+        ],
+        "triple_list_pred": [
+            [
+                "mobility",
+                "excellent",
+                "positive"
+            ],
+            [
+                "mobility",
+                "optimal",
+                "positive"
+            ],
+            [
+                "weight",
+                "optimal",
+                "positive"
+            ],
+            [
+                "functions",
+                "excellent",
+                "positive"
+            ],
+            [
+                "functions",
+                "optimal",
+                "positive"
+            ],
+            [
+                "weight",
+                "excellent",
+                "positive"
+            ]
+        ],
+        "new": [
+            [
+                "functions",
+                "excellent",
+                "positive"
+            ],
+            [
+                "weight",
+                "optimal",
+                "positive"
+            ],
+            [
+                "functions",
+                "optimal",
+                "positive"
+            ],
+            [
+                "mobility",
+                "excellent",
+                "positive"
+            ]
+        ],
+        "lack": [
+            [
+                "durability of the battery",
+                "excellent",
+                "positive"
+            ],
+            [
+                "functions provided by the trackpad",
+                "unmatched",
+                "positive"
+            ],
+            [
+                "size",
+                "excellent",
+                "positive"
+            ],
+            [
+                "operating system",
+                "excellent",
+                "positive"
+            ]
+        ]
+    }
+]

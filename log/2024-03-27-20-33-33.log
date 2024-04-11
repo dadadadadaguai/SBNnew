@@ -1,0 +1,1108 @@
+ATT_SPAN_block_num=1
+Filter_Strategy=True
+Only_token_head=False
+RANDOM_SEED=2022
+accumulation_steps=1
+bert_feature_dim=768
+block_num=1
+dataset=res14
+dataset_path=./datasets/ASTE-Data-V2-EMNLP2020/
+device=cuda
+do_lower_case=True
+drop_out=0.1
+embedding_dim4width=200
+epochs=130
+init_model=pretrained_models/bert-base-uncased
+init_vocab=pretrained_models/bert-base-uncased
+kl_loss=True
+kl_loss_mode=KLLoss
+kl_loss_weight=0.5
+learning_rate=1e-05
+max_seq_length=100
+max_span_length=8
+mode=train
+model_dir=savemodel/
+model_para_test=False
+muti_gpu=False
+order_input=True
+output_path=triples.json
+random_shuffle=0
+related_span_block_num=1
+related_span_underline=False
+span_generation=Max
+task_learning_rate=0.0001
+train_batch_size=16
+warm_up=0.1
+whether_warm_up=False
+开始加载测试集
+测试集加载完成
+开始加载训练与验证集
+训练集与验证集加载完成
+Epoch:0
+('Loss:', 49496.8405456543)
+('KL_Loss:', 812.8916158912185)
+aspect precision: 0.8461538461538461	aspect recall: 0.19298246	aspect f1: 0.31428571
+opinion precision: 1.0	opinion recall: 0.56756757	opinion f1: 0.72413793
+APCE precision: 0.8333333333333334	APCE recall: 0.08771930	APCE f1: 0.15873016
+pair precision: 0.45	pair recall: 0.06250000	pair f1: 0.10975610
+triple precision: 0.4	triple recall: 0.05555556	triple f1: 0.09756098
+Epoch:1
+('Loss:', 20744.736587524414)
+('KL_Loss:', 810.2105085879591)
+aspect precision: 0.8648648648648649	aspect recall: 0.28070175	aspect f1: 0.42384106
+opinion precision: 0.9491525423728814	opinion recall: 0.75675676	opinion f1: 0.84210526
+APCE precision: 0.8846153846153846	APCE recall: 0.20175439	APCE f1: 0.32857143
+pair precision: 0.35294117647058826	pair recall: 0.12500000	pair f1: 0.18461538
+triple precision: 0.30612244897959184	triple recall: 0.10416667	triple f1: 0.15544041
+Epoch:2
+('Loss:', 17385.337600708008)
+('KL_Loss:', 816.4214482457837)
+aspect precision: 0.9	aspect recall: 0.31578947	aspect f1: 0.46753247
+opinion precision: 0.9655172413793104	opinion recall: 0.75675676	opinion f1: 0.84848485
+APCE precision: 0.9285714285714286	APCE recall: 0.22807018	APCE f1: 0.36619718
+pair precision: 0.47368421052631576	pair recall: 0.18750000	pair f1: 0.26865672
+triple precision: 0.45614035087719296	triple recall: 0.18055556	triple f1: 0.25870647
+Epoch:3
+('Loss:', 15587.666145324707)
+('KL_Loss:', 810.731178637014)
+aspect precision: 0.9523809523809523	aspect recall: 0.35087719	aspect f1: 0.51282051
+opinion precision: 0.967741935483871	opinion recall: 0.81081081	opinion f1: 0.88235294
+APCE precision: 0.9375	APCE recall: 0.26315789	APCE f1: 0.41095890
+pair precision: 0.463768115942029	pair recall: 0.22222222	pair f1: 0.30046948
+triple precision: 0.43478260869565216	triple recall: 0.20833333	triple f1: 0.28169014
+Epoch:4
+('Loss:', 14334.784774780273)
+('KL_Loss:', 813.9390027436503)
+aspect precision: 0.9782608695652174	aspect recall: 0.39473684	aspect f1: 0.56250000
+opinion precision: 0.953125	opinion recall: 0.82432432	opinion f1: 0.88405797
+APCE precision: 0.9090909090909091	APCE recall: 0.26315789	APCE f1: 0.40816327
+pair precision: 0.4444444444444444	pair recall: 0.22222222	pair f1: 0.29629630
+triple precision: 0.4027777777777778	triple recall: 0.20138889	triple f1: 0.26851852
+Epoch:5
+('Loss:', 13283.058250427246)
+('KL_Loss:', 785.9305801165289)
+aspect precision: 0.96	aspect recall: 0.42105263	aspect f1: 0.58536585
+opinion precision: 0.9538461538461539	opinion recall: 0.83783784	opinion f1: 0.89208633
+APCE precision: 0.9655172413793104	APCE recall: 0.24561404	APCE f1: 0.39160839
+pair precision: 0.4444444444444444	pair recall: 0.19444444	pair f1: 0.27053140
+triple precision: 0.4426229508196721	triple recall: 0.18750000	triple f1: 0.26341463
+Epoch:6
+('Loss:', 12216.45792388916)
+('KL_Loss:', 802.4889039890311)
+aspect precision: 0.96	aspect recall: 0.42105263	aspect f1: 0.58536585
+opinion precision: 0.967741935483871	opinion recall: 0.81081081	opinion f1: 0.88235294
+APCE precision: 0.9047619047619048	APCE recall: 0.16666667	APCE f1: 0.28148148
+pair precision: 0.5348837209302325	pair recall: 0.15972222	pair f1: 0.24598930
+triple precision: 0.5	triple recall: 0.14583333	triple f1: 0.22580645
+Epoch:7
+('Loss:', 11335.188003540039)
+('KL_Loss:', 791.7647000751839)
+aspect precision: 0.9824561403508771	aspect recall: 0.49122807	aspect f1: 0.65497076
+opinion precision: 0.9538461538461539	opinion recall: 0.83783784	opinion f1: 0.89208633
+APCE precision: 1.0	APCE recall: 0.26315789	APCE f1: 0.41666667
+pair precision: 0.5714285714285714	pair recall: 0.22222222	pair f1: 0.32000000
+triple precision: 0.5925925925925926	triple recall: 0.22222222	triple f1: 0.32323232
+Epoch:8
+('Loss:', 11034.470985412598)
+('KL_Loss:', 780.1056069597557)
+aspect precision: 1.0	aspect recall: 0.33333333	aspect f1: 0.50000000
+opinion precision: 0.9402985074626866	opinion recall: 0.85135135	opinion f1: 0.89361702
+APCE precision: 1.0	APCE recall: 0.15789474	APCE f1: 0.27272727
+pair precision: 0.5384615384615384	pair recall: 0.14583333	pair f1: 0.22950820
+triple precision: 0.5263157894736842	triple recall: 0.13888889	triple f1: 0.21978022
+Epoch:9
+('Loss:', 10570.724662780762)
+('KL_Loss:', 774.0132180395666)
+aspect precision: 0.9466666666666667	aspect recall: 0.62280702	aspect f1: 0.75132275
+opinion precision: 0.9402985074626866	opinion recall: 0.85135135	opinion f1: 0.89361702
+APCE precision: 0.9761904761904762	APCE recall: 0.35964912	APCE f1: 0.52564103
+pair precision: 0.5176470588235295	pair recall: 0.30555556	pair f1: 0.38427948
+triple precision: 0.5365853658536586	triple recall: 0.30555556	triple f1: 0.38938053
+Epoch:10
+('Loss:', 9546.795574188232)
+('KL_Loss:', 770.3656619364089)
+aspect precision: 0.9661016949152542	aspect recall: 0.50000000	aspect f1: 0.65895954
+opinion precision: 0.9692307692307692	opinion recall: 0.85135135	opinion f1: 0.90647482
+APCE precision: 0.9583333333333334	APCE recall: 0.40350877	APCE f1: 0.56790123
+pair precision: 0.5955056179775281	pair recall: 0.36805556	pair f1: 0.45493562
+triple precision: 0.6022727272727273	triple recall: 0.36805556	triple f1: 0.45689655
+Epoch:11
+('Loss:', 7654.338138580322)
+('KL_Loss:', 765.6602186878647)
+aspect precision: 0.9615384615384616	aspect recall: 0.65789474	aspect f1: 0.78125000
+opinion precision: 0.96875	opinion recall: 0.83783784	opinion f1: 0.89855072
+APCE precision: 0.9333333333333333	APCE recall: 0.61403509	APCE f1: 0.74074074
+pair precision: 0.6031746031746031	pair recall: 0.52777778	pair f1: 0.56296296
+triple precision: 0.5967741935483871	triple recall: 0.51388889	triple f1: 0.55223881
+_________________________________________________________
+best model save
+_________________________________________________________
+Epoch:12
+('Loss:', 6607.317554473877)
+('KL_Loss:', 767.825066797893)
+aspect precision: 1.0	aspect recall: 0.53508772	aspect f1: 0.69714286
+opinion precision: 0.9384615384615385	opinion recall: 0.82432432	opinion f1: 0.87769784
+APCE precision: 0.9	APCE recall: 0.47368421	APCE f1: 0.62068966
+pair precision: 0.6767676767676768	pair recall: 0.46527778	pair f1: 0.55144033
+triple precision: 0.6391752577319587	triple recall: 0.43055556	triple f1: 0.51452282
+Epoch:13
+('Loss:', 6342.152786254883)
+('KL_Loss:', 764.9776810067448)
+aspect precision: 1.0	aspect recall: 0.50877193	aspect f1: 0.67441860
+opinion precision: 0.9545454545454546	opinion recall: 0.85135135	opinion f1: 0.90000000
+APCE precision: 0.9818181818181818	APCE recall: 0.47368421	APCE f1: 0.63905325
+pair precision: 0.7764705882352941	pair recall: 0.45833333	pair f1: 0.57641921
+triple precision: 0.7738095238095238	triple recall: 0.45138889	triple f1: 0.57017544
+_________________________________________________________
+best model save
+_________________________________________________________
+Epoch:14
+('Loss:', 6353.078495025635)
+('KL_Loss:', 761.5499077551343)
+aspect precision: 1.0	aspect recall: 0.47368421	aspect f1: 0.64285714
+opinion precision: 0.9830508474576272	opinion recall: 0.78378378	opinion f1: 0.87218045
+APCE precision: 0.9811320754716981	APCE recall: 0.45614035	APCE f1: 0.62275449
+pair precision: 0.7763157894736842	pair recall: 0.40972222	pair f1: 0.53636364
+triple precision: 0.7631578947368421	triple recall: 0.40277778	triple f1: 0.52727273
+Epoch:15
+('Loss:', 5769.1944007873535)
+('KL_Loss:', 759.14459037597)
+aspect precision: 1.0	aspect recall: 0.43859649	aspect f1: 0.60975610
+opinion precision: 0.9824561403508771	opinion recall: 0.75675676	opinion f1: 0.85496183
+APCE precision: 0.98	APCE recall: 0.42982456	APCE f1: 0.59756098
+pair precision: 0.8142857142857143	pair recall: 0.39583333	pair f1: 0.53271028
+triple precision: 0.8	triple recall: 0.38888889	triple f1: 0.52336449
+Epoch:16
+('Loss:', 5172.8489818573)
+('KL_Loss:', 744.1930049667083)
+aspect precision: 0.9861111111111112	aspect recall: 0.62280702	aspect f1: 0.76344086
+opinion precision: 0.927536231884058	opinion recall: 0.86486486	opinion f1: 0.89510490
+APCE precision: 0.9444444444444444	APCE recall: 0.59649123	APCE f1: 0.73118280
+pair precision: 0.7452830188679245	pair recall: 0.54861111	pair f1: 0.63200000
+triple precision: 0.7211538461538461	triple recall: 0.52083333	triple f1: 0.60483871
+_________________________________________________________
+best model save
+_________________________________________________________
+Epoch:17
+('Loss:', 4905.180913925171)
+('KL_Loss:', 753.0792049598426)
+aspect precision: 0.9615384615384616	aspect recall: 0.65789474	aspect f1: 0.78125000
+opinion precision: 0.9420289855072463	opinion recall: 0.87837838	opinion f1: 0.90909091
+APCE precision: 0.8701298701298701	APCE recall: 0.58771930	APCE f1: 0.70157068
+pair precision: 0.717948717948718	pair recall: 0.58333333	pair f1: 0.64367816
+triple precision: 0.6460176991150443	triple recall: 0.50694444	triple f1: 0.56809339
+Epoch:18
+('Loss:', 4719.013496398926)
+('KL_Loss:', 760.5629019024385)
+aspect precision: 0.8362068965517241	aspect recall: 0.85087719	aspect f1: 0.84347826
+opinion precision: 0.9178082191780822	opinion recall: 0.90540541	opinion f1: 0.91156463
+APCE precision: 0.7850467289719626	APCE recall: 0.73684211	APCE f1: 0.76018100
+pair precision: 0.5824175824175825	pair recall: 0.73611111	pair f1: 0.65030675
+triple precision: 0.5421686746987951	triple recall: 0.62500000	triple f1: 0.58064516
+Epoch:19
+('Loss:', 5083.855424880981)
+('KL_Loss:', 749.0473326610663)
+aspect precision: 0.7573529411764706	aspect recall: 0.90350877	aspect f1: 0.82400000
+opinion precision: 0.9154929577464789	opinion recall: 0.87837838	opinion f1: 0.89655172
+APCE precision: 0.7073170731707317	APCE recall: 0.76315789	APCE f1: 0.73417722
+pair precision: 0.4954128440366973	pair recall: 0.75000000	pair f1: 0.59668508
+triple precision: 0.46408839779005523	triple recall: 0.58333333	triple f1: 0.51692308
+Epoch:20
+('Loss:', 4219.892946243286)
+('KL_Loss:', 750.6882198676748)
+aspect precision: 0.897196261682243	aspect recall: 0.84210526	aspect f1: 0.86877828
+opinion precision: 0.9285714285714286	opinion recall: 0.87837838	opinion f1: 0.90277778
+APCE precision: 0.8556701030927835	APCE recall: 0.72807018	APCE f1: 0.78672986
+pair precision: 0.6733333333333333	pair recall: 0.70138889	pair f1: 0.68707483
+triple precision: 0.6111111111111112	triple recall: 0.61111111	triple f1: 0.61111111
+_________________________________________________________
+best model save
+_________________________________________________________
+Epoch:21
+('Loss:', 3357.3363513946533)
+('KL_Loss:', 740.9949452176177)
+aspect precision: 0.9215686274509803	aspect recall: 0.82456140	aspect f1: 0.87037037
+opinion precision: 0.9285714285714286	opinion recall: 0.87837838	opinion f1: 0.90277778
+APCE precision: 0.8571428571428571	APCE recall: 0.68421053	APCE f1: 0.76097561
+pair precision: 0.7021276595744681	pair recall: 0.68750000	pair f1: 0.69473684
+triple precision: 0.6544117647058824	triple recall: 0.61805556	triple f1: 0.63571429
+_________________________________________________________
+best model save
+_________________________________________________________
+Epoch:22
+('Loss:', 2773.7979021072388)
+('KL_Loss:', 738.8689795967294)
+aspect precision: 0.9056603773584906	aspect recall: 0.84210526	aspect f1: 0.87272727
+opinion precision: 0.927536231884058	opinion recall: 0.86486486	opinion f1: 0.89510490
+APCE precision: 0.8	APCE recall: 0.70175439	APCE f1: 0.74766355
+pair precision: 0.6455696202531646	pair recall: 0.70833333	pair f1: 0.67549669
+triple precision: 0.5666666666666667	triple recall: 0.59027778	triple f1: 0.57823129
+Epoch:23
+('Loss:', 2804.1275939941406)
+('KL_Loss:', 754.2373235011402)
+aspect precision: 0.8899082568807339	aspect recall: 0.85087719	aspect f1: 0.86995516
+opinion precision: 0.9285714285714286	opinion recall: 0.87837838	opinion f1: 0.90277778
+APCE precision: 0.7920792079207921	APCE recall: 0.70175439	APCE f1: 0.74418605
+pair precision: 0.6538461538461539	pair recall: 0.70833333	pair f1: 0.68000000
+triple precision: 0.5958904109589042	triple recall: 0.60416667	triple f1: 0.60000000
+Epoch:24
+('Loss:', 2550.625463485718)
+('KL_Loss:', 755.2499820872714)
+aspect precision: 0.8818181818181818	aspect recall: 0.85087719	aspect f1: 0.86607143
+opinion precision: 0.9411764705882353	opinion recall: 0.86486486	opinion f1: 0.90140845
+APCE precision: 0.8404255319148937	APCE recall: 0.69298246	APCE f1: 0.75961538
+pair precision: 0.6950354609929078	pair recall: 0.68055556	pair f1: 0.68771930
+triple precision: 0.6691729323308271	triple recall: 0.61805556	triple f1: 0.64259928
+_________________________________________________________
+best model save
+_________________________________________________________
+Epoch:25
+('Loss:', 2628.341082572937)
+('KL_Loss:', 761.918251293949)
+aspect precision: 0.9166666666666666	aspect recall: 0.77192982	aspect f1: 0.83809524
+opinion precision: 0.9154929577464789	opinion recall: 0.87837838	opinion f1: 0.89655172
+APCE precision: 0.8651685393258427	APCE recall: 0.67543860	APCE f1: 0.75862069
+pair precision: 0.706766917293233	pair recall: 0.65277778	pair f1: 0.67870036
+triple precision: 0.6666666666666666	triple recall: 0.59722222	triple f1: 0.63003663
+Epoch:26
+('Loss:', 2425.0160121917725)
+('KL_Loss:', 755.1510185083158)
+aspect precision: 0.912621359223301	aspect recall: 0.82456140	aspect f1: 0.86635945
+opinion precision: 0.9285714285714286	opinion recall: 0.87837838	opinion f1: 0.90277778
+APCE precision: 0.8478260869565217	APCE recall: 0.68421053	APCE f1: 0.75728155
+pair precision: 0.697841726618705	pair recall: 0.67361111	pair f1: 0.68551237
+triple precision: 0.631578947368421	triple recall: 0.58333333	triple f1: 0.60649819
+Epoch:27
+('Loss:', 2401.634422302246)
+('KL_Loss:', 757.1006241688164)
+aspect precision: 0.8727272727272727	aspect recall: 0.84210526	aspect f1: 0.85714286
+opinion precision: 0.9041095890410958	opinion recall: 0.89189189	opinion f1: 0.89795918
+APCE precision: 0.7428571428571429	APCE recall: 0.68421053	APCE f1: 0.71232877
+pair precision: 0.6369047619047619	pair recall: 0.74305556	pair f1: 0.68589744
+triple precision: 0.5605095541401274	triple recall: 0.61111111	triple f1: 0.58471761
+Epoch:28
+('Loss:', 2122.1273441314697)
+('KL_Loss:', 752.9247723016063)
+aspect precision: 0.9238095238095239	aspect recall: 0.85087719	aspect f1: 0.88584475
+opinion precision: 0.927536231884058	opinion recall: 0.86486486	opinion f1: 0.89510490
+APCE precision: 0.8144329896907216	APCE recall: 0.69298246	APCE f1: 0.74881517
+pair precision: 0.7028985507246377	pair recall: 0.67361111	pair f1: 0.68794326
+triple precision: 0.6296296296296297	triple recall: 0.59027778	triple f1: 0.60931900
+Epoch:29
+('Loss:', 2213.3263664245605)
+('KL_Loss:', 757.5416636696949)
+aspect precision: 0.9555555555555556	aspect recall: 0.75438596	aspect f1: 0.84313725
+opinion precision: 0.96875	opinion recall: 0.83783784	opinion f1: 0.89855072
+APCE precision: 0.935064935064935	APCE recall: 0.63157895	APCE f1: 0.75392670
+pair precision: 0.8095238095238095	pair recall: 0.59027778	pair f1: 0.68273092
+triple precision: 0.7619047619047619	triple recall: 0.55555556	triple f1: 0.64257028
+Epoch:30
+('Loss:', 2351.4521589279175)
+('KL_Loss:', 751.2107316193686)
+aspect precision: 0.9207920792079208	aspect recall: 0.81578947	aspect f1: 0.86511628
+opinion precision: 0.9841269841269841	opinion recall: 0.83783784	opinion f1: 0.90510949
+APCE precision: 0.8795180722891566	APCE recall: 0.64035088	APCE f1: 0.74111675
+pair precision: 0.717741935483871	pair recall: 0.61805556	pair f1: 0.66417910
+triple precision: 0.6721311475409836	triple recall: 0.56944444	triple f1: 0.61654135
+Epoch:31
+('Loss:', 2161.5699701309204)
+('KL_Loss:', 746.4003581517305)
+aspect precision: 0.912621359223301	aspect recall: 0.82456140	aspect f1: 0.86635945
+opinion precision: 0.927536231884058	opinion recall: 0.86486486	opinion f1: 0.89510490
+APCE precision: 0.8229166666666666	APCE recall: 0.69298246	APCE f1: 0.75238095
+pair precision: 0.6778523489932886	pair recall: 0.70138889	pair f1: 0.68941980
+triple precision: 0.6083916083916084	triple recall: 0.60416667	triple f1: 0.60627178
+Epoch:32
+('Loss:', 1883.50270652771)
+('KL_Loss:', 751.8051234902506)
+aspect precision: 0.9215686274509803	aspect recall: 0.82456140	aspect f1: 0.87037037
+opinion precision: 0.9142857142857143	opinion recall: 0.86486486	opinion f1: 0.88888889
+APCE precision: 0.8144329896907216	APCE recall: 0.69298246	APCE f1: 0.74881517
+pair precision: 0.6736111111111112	pair recall: 0.67361111	pair f1: 0.67361111
+triple precision: 0.6	triple recall: 0.58333333	triple f1: 0.59154930
+Epoch:33
+('Loss:', 1997.6980924606323)
+('KL_Loss:', 756.7728414926459)
+aspect precision: 0.9387755102040817	aspect recall: 0.80701754	aspect f1: 0.86792453
+opinion precision: 0.9142857142857143	opinion recall: 0.86486486	opinion f1: 0.88888889
+APCE precision: 0.8526315789473684	APCE recall: 0.71052632	APCE f1: 0.77511962
+pair precision: 0.7058823529411765	pair recall: 0.66666667	pair f1: 0.68571429
+triple precision: 0.6541353383458647	triple recall: 0.60416667	triple f1: 0.62815884
+Epoch:34
+('Loss:', 1741.8630294799805)
+('KL_Loss:', 762.8350301274673)
+aspect precision: 0.975	aspect recall: 0.68421053	aspect f1: 0.80412371
+opinion precision: 0.9692307692307692	opinion recall: 0.85135135	opinion f1: 0.90647482
+APCE precision: 0.9473684210526315	APCE recall: 0.63157895	APCE f1: 0.75789474
+pair precision: 0.7777777777777778	pair recall: 0.58333333	pair f1: 0.66666667
+triple precision: 0.7592592592592593	triple recall: 0.56944444	triple f1: 0.65079365
+_________________________________________________________
+best model save
+_________________________________________________________
+Epoch:35
+('Loss:', 1820.2605199813843)
+('KL_Loss:', 752.9134989239981)
+aspect precision: 0.9761904761904762	aspect recall: 0.71929825	aspect f1: 0.82828283
+opinion precision: 0.9154929577464789	opinion recall: 0.87837838	opinion f1: 0.89655172
+APCE precision: 0.9176470588235294	APCE recall: 0.68421053	APCE f1: 0.78391960
+pair precision: 0.744	pair recall: 0.64583333	pair f1: 0.69144981
+triple precision: 0.7049180327868853	triple recall: 0.59722222	triple f1: 0.64661654
+Epoch:36
+('Loss:', 1697.9720525741577)
+('KL_Loss:', 757.7278163218707)
+aspect precision: 0.9325842696629213	aspect recall: 0.72807018	aspect f1: 0.81773399
+opinion precision: 0.9295774647887324	opinion recall: 0.89189189	opinion f1: 0.91034483
+APCE precision: 0.8295454545454546	APCE recall: 0.64035088	APCE f1: 0.72277228
+pair precision: 0.7272727272727273	pair recall: 0.66666667	pair f1: 0.69565217
+triple precision: 0.6484375	triple recall: 0.57638889	triple f1: 0.61029412
+Epoch:37
+('Loss:', 1687.5685777664185)
+('KL_Loss:', 755.7342633794573)
+aspect precision: 0.9565217391304348	aspect recall: 0.77192982	aspect f1: 0.85436893
+opinion precision: 0.9264705882352942	opinion recall: 0.85135135	opinion f1: 0.88732394
+APCE precision: 0.8260869565217391	APCE recall: 0.66666667	APCE f1: 0.73786408
+pair precision: 0.752	pair recall: 0.65277778	pair f1: 0.69888476
+triple precision: 0.648	triple recall: 0.56250000	triple f1: 0.60223048
+Epoch:38
+('Loss:', 1507.0326871871948)
+('KL_Loss:', 748.6993079212633)
+aspect precision: 0.8990825688073395	aspect recall: 0.85964912	aspect f1: 0.87892377
+opinion precision: 0.9295774647887324	opinion recall: 0.89189189	opinion f1: 0.91034483
+APCE precision: 0.7830188679245284	APCE recall: 0.72807018	APCE f1: 0.75454545
+pair precision: 0.6932515337423313	pair recall: 0.78472222	pair f1: 0.73615635
+triple precision: 0.6025641025641025	triple recall: 0.65277778	triple f1: 0.62666667
+Epoch:39
+('Loss:', 1580.172604560852)
+('KL_Loss:', 753.6720059257723)
+aspect precision: 0.9134615384615384	aspect recall: 0.83333333	aspect f1: 0.87155963
+opinion precision: 0.9305555555555556	opinion recall: 0.90540541	opinion f1: 0.91780822
+APCE precision: 0.8163265306122449	APCE recall: 0.70175439	APCE f1: 0.75471698
+pair precision: 0.7114093959731543	pair recall: 0.73611111	pair f1: 0.72354949
+triple precision: 0.6083916083916084	triple recall: 0.60416667	triple f1: 0.60627178
+Epoch:40
+('Loss:', 1504.456169128418)
+('KL_Loss:', 754.4572600559467)
+aspect precision: 0.8849557522123894	aspect recall: 0.87719298	aspect f1: 0.88105727
+opinion precision: 0.9285714285714286	opinion recall: 0.87837838	opinion f1: 0.90277778
+APCE precision: 0.7454545454545455	APCE recall: 0.71929825	APCE f1: 0.73214286
+pair precision: 0.6162790697674418	pair recall: 0.73611111	pair f1: 0.67088608
+triple precision: 0.5471698113207547	triple recall: 0.60416667	triple f1: 0.57425743
+Epoch:41
+('Loss:', 1386.0701036453247)
+('KL_Loss:', 754.066212928722)
+aspect precision: 0.8728813559322034	aspect recall: 0.90350877	aspect f1: 0.88793103
+opinion precision: 0.9428571428571428	opinion recall: 0.89189189	opinion f1: 0.91666667
+APCE precision: 0.7521367521367521	APCE recall: 0.77192982	APCE f1: 0.76190476
+pair precision: 0.5854922279792746	pair recall: 0.78472222	pair f1: 0.67062315
+triple precision: 0.5402298850574713	triple recall: 0.65277778	triple f1: 0.59119497
+Epoch:42
+('Loss:', 1534.1548442840576)
+('KL_Loss:', 749.4562196633012)
+aspect precision: 0.8403361344537815	aspect recall: 0.87719298	aspect f1: 0.85836910
+opinion precision: 0.9552238805970149	opinion recall: 0.86486486	opinion f1: 0.90780142
+APCE precision: 0.7745098039215687	APCE recall: 0.69298246	APCE f1: 0.73148148
+pair precision: 0.6380368098159509	pair recall: 0.72222222	pair f1: 0.67752443
+triple precision: 0.5986394557823129	triple recall: 0.61111111	triple f1: 0.60481100
+Epoch:43
+('Loss:', 1425.0740747451782)
+('KL_Loss:', 759.7400038283462)
+aspect precision: 0.8857142857142857	aspect recall: 0.81578947	aspect f1: 0.84931507
+opinion precision: 0.9682539682539683	opinion recall: 0.82432432	opinion f1: 0.89051095
+APCE precision: 0.8	APCE recall: 0.63157895	APCE f1: 0.70588235
+pair precision: 0.7089552238805971	pair recall: 0.65972222	pair f1: 0.68345324
+triple precision: 0.6201550387596899	triple recall: 0.55555556	triple f1: 0.58608059
+Epoch:44
+('Loss:', 1436.8317975997925)
+('KL_Loss:', 746.2173092111059)
+aspect precision: 0.883495145631068	aspect recall: 0.79824561	aspect f1: 0.83870968
+opinion precision: 0.9264705882352942	opinion recall: 0.85135135	opinion f1: 0.88732394
+APCE precision: 0.797752808988764	APCE recall: 0.62280702	APCE f1: 0.69950739
+pair precision: 0.6811594202898551	pair recall: 0.65277778	pair f1: 0.66666667
+triple precision: 0.6030534351145038	triple recall: 0.54861111	triple f1: 0.57454545
+Epoch:45
+('Loss:', 1374.5502977371216)
+('KL_Loss:', 747.4329727745686)
+aspect precision: 0.9347826086956522	aspect recall: 0.75438596	aspect f1: 0.83495146
+opinion precision: 0.9402985074626866	opinion recall: 0.85135135	opinion f1: 0.89361702
+APCE precision: 0.8554216867469879	APCE recall: 0.62280702	APCE f1: 0.72081218
+pair precision: 0.7870370370370371	pair recall: 0.59027778	pair f1: 0.67460317
+triple precision: 0.7314814814814815	triple recall: 0.54861111	triple f1: 0.62698413
+Epoch:46
+('Loss:', 1342.3338918685913)
+('KL_Loss:', 745.5278685686505)
+aspect precision: 0.9191919191919192	aspect recall: 0.79824561	aspect f1: 0.85446009
+opinion precision: 0.9142857142857143	opinion recall: 0.86486486	opinion f1: 0.88888889
+APCE precision: 0.8152173913043478	APCE recall: 0.65789474	APCE f1: 0.72815534
+pair precision: 0.7285714285714285	pair recall: 0.70833333	pair f1: 0.71830986
+triple precision: 0.6390977443609023	triple recall: 0.59027778	triple f1: 0.61371841
+Epoch:47
+('Loss:', 1320.8480653762817)
+('KL_Loss:', 749.8049373342986)
+aspect precision: 0.912621359223301	aspect recall: 0.82456140	aspect f1: 0.86635945
+opinion precision: 0.8589743589743589	opinion recall: 0.90540541	opinion f1: 0.88157895
+APCE precision: 0.8	APCE recall: 0.70175439	APCE f1: 0.74766355
+pair precision: 0.6580645161290323	pair recall: 0.70833333	pair f1: 0.68227425
+triple precision: 0.581081081081081	triple recall: 0.59722222	triple f1: 0.58904110
+Epoch:48
+('Loss:', 1286.9427690505981)
+('KL_Loss:', 742.1456610786802)
+aspect precision: 0.8857142857142857	aspect recall: 0.81578947	aspect f1: 0.84931507
+opinion precision: 0.9130434782608695	opinion recall: 0.85135135	opinion f1: 0.88111888
+APCE precision: 0.77	APCE recall: 0.67543860	APCE f1: 0.71962617
+pair precision: 0.6513157894736842	pair recall: 0.68750000	pair f1: 0.66891892
+triple precision: 0.5704697986577181	triple recall: 0.59027778	triple f1: 0.58020478
+Epoch:49
+('Loss:', 1175.9718980789185)
+('KL_Loss:', 751.0218434499081)
+aspect precision: 0.9	aspect recall: 0.78947368	aspect f1: 0.84112150
+opinion precision: 0.9411764705882353	opinion recall: 0.86486486	opinion f1: 0.90140845
+APCE precision: 0.7789473684210526	APCE recall: 0.64912281	APCE f1: 0.70813397
+pair precision: 0.6622516556291391	pair recall: 0.69444444	pair f1: 0.67796610
+triple precision: 0.5608108108108109	triple recall: 0.57638889	triple f1: 0.56849315
+Epoch:50
+('Loss:', 1206.3125486373901)
+('KL_Loss:', 754.2317677368491)
+aspect precision: 0.92	aspect recall: 0.80701754	aspect f1: 0.85981308
+opinion precision: 0.9142857142857143	opinion recall: 0.86486486	opinion f1: 0.88888889
+APCE precision: 0.8152173913043478	APCE recall: 0.65789474	APCE f1: 0.72815534
+pair precision: 0.7266187050359713	pair recall: 0.70138889	pair f1: 0.71378092
+triple precision: 0.6343283582089553	triple recall: 0.59027778	triple f1: 0.61151079
+Epoch:51
+('Loss:', 1158.5117349624634)
+('KL_Loss:', 745.0258688847181)
+aspect precision: 0.9117647058823529	aspect recall: 0.81578947	aspect f1: 0.86111111
+opinion precision: 0.9142857142857143	opinion recall: 0.86486486	opinion f1: 0.88888889
+APCE precision: 0.8172043010752689	APCE recall: 0.66666667	APCE f1: 0.73429952
+pair precision: 0.6845637583892618	pair recall: 0.70833333	pair f1: 0.69624573
+triple precision: 0.6027397260273972	triple recall: 0.61111111	triple f1: 0.60689655
+Epoch:52
+('Loss:', 1227.744128704071)
+('KL_Loss:', 746.6536393220682)
+aspect precision: 0.8878504672897196	aspect recall: 0.83333333	aspect f1: 0.85972851
+opinion precision: 0.927536231884058	opinion recall: 0.86486486	opinion f1: 0.89510490
+APCE precision: 0.7959183673469388	APCE recall: 0.68421053	APCE f1: 0.73584906
+pair precision: 0.676056338028169	pair recall: 0.66666667	pair f1: 0.67132867
+triple precision: 0.5985401459854015	triple recall: 0.56944444	triple f1: 0.58362989
+Epoch:53
+('Loss:', 1245.4660921096802)
+('KL_Loss:', 748.3845896258223)
+aspect precision: 0.9204545454545454	aspect recall: 0.71052632	aspect f1: 0.80198020
+opinion precision: 0.9130434782608695	opinion recall: 0.85135135	opinion f1: 0.88111888
+APCE precision: 0.8481012658227848	APCE recall: 0.58771930	APCE f1: 0.69430052
+pair precision: 0.7614678899082569	pair recall: 0.57638889	pair f1: 0.65612648
+triple precision: 0.7009345794392523	triple recall: 0.52083333	triple f1: 0.59760956
+Epoch:54
+('Loss:', 1216.2521476745605)
+('KL_Loss:', 750.9171708916984)
+aspect precision: 0.9393939393939394	aspect recall: 0.81578947	aspect f1: 0.87323944
+opinion precision: 0.9552238805970149	opinion recall: 0.86486486	opinion f1: 0.90780142
+APCE precision: 0.8131868131868132	APCE recall: 0.64912281	APCE f1: 0.72195122
+pair precision: 0.7313432835820896	pair recall: 0.68055556	pair f1: 0.70503597
+triple precision: 0.6335877862595419	triple recall: 0.57638889	triple f1: 0.60363636
+Epoch:55
+('Loss:', 1135.1629371643066)
+('KL_Loss:', 749.8943883934922)
+aspect precision: 0.9278350515463918	aspect recall: 0.78947368	aspect f1: 0.85308057
+opinion precision: 0.9545454545454546	opinion recall: 0.85135135	opinion f1: 0.90000000
+APCE precision: 0.8275862068965517	APCE recall: 0.63157895	APCE f1: 0.71641791
+pair precision: 0.7950819672131147	pair recall: 0.67361111	pair f1: 0.72932331
+triple precision: 0.6974789915966386	triple recall: 0.57638889	triple f1: 0.63117871
+Epoch:56
+('Loss:', 1093.0448608398438)
+('KL_Loss:', 752.1493609601388)
+aspect precision: 0.9029126213592233	aspect recall: 0.81578947	aspect f1: 0.85714286
+opinion precision: 0.9545454545454546	opinion recall: 0.85135135	opinion f1: 0.90000000
+APCE precision: 0.8064516129032258	APCE recall: 0.65789474	APCE f1: 0.72463768
+pair precision: 0.7704918032786885	pair recall: 0.65277778	pair f1: 0.70676692
+triple precision: 0.7008547008547008	triple recall: 0.56944444	triple f1: 0.62835249
+Epoch:57
+('Loss:', 1090.9440956115723)
+('KL_Loss:', 737.9922922109897)
+aspect precision: 0.8818181818181818	aspect recall: 0.85087719	aspect f1: 0.86607143
+opinion precision: 0.9295774647887324	opinion recall: 0.89189189	opinion f1: 0.91034483
+APCE precision: 0.7843137254901961	APCE recall: 0.70175439	APCE f1: 0.74074074
+pair precision: 0.6948051948051948	pair recall: 0.74305556	pair f1: 0.71812081
+triple precision: 0.6190476190476191	triple recall: 0.63194444	triple f1: 0.62542955
+Epoch:58
+('Loss:', 1305.685260772705)
+('KL_Loss:', 742.6102954443538)
+aspect precision: 0.94	aspect recall: 0.82456140	aspect f1: 0.87850467
+opinion precision: 0.9253731343283582	opinion recall: 0.83783784	opinion f1: 0.87943262
+APCE precision: 0.8369565217391305	APCE recall: 0.67543860	APCE f1: 0.74757282
+pair precision: 0.7142857142857143	pair recall: 0.69444444	pair f1: 0.70422535
+triple precision: 0.60431654676259	triple recall: 0.58333333	triple f1: 0.59363958
+Epoch:59
+('Loss:', 1164.7930345535278)
+('KL_Loss:', 731.7742931394788)
+aspect precision: 0.9306930693069307	aspect recall: 0.82456140	aspect f1: 0.87441860
+opinion precision: 0.9402985074626866	opinion recall: 0.85135135	opinion f1: 0.89361702
+APCE precision: 0.8041237113402062	APCE recall: 0.68421053	APCE f1: 0.73933649
+pair precision: 0.7027027027027027	pair recall: 0.72222222	pair f1: 0.71232877
+triple precision: 0.593103448275862	triple recall: 0.59722222	triple f1: 0.59515571
+Epoch:60
+('Loss:', 1060.7871580123901)
+('KL_Loss:', 740.7704978592933)
+aspect precision: 0.9292929292929293	aspect recall: 0.80701754	aspect f1: 0.86384977
+opinion precision: 0.9411764705882353	opinion recall: 0.86486486	opinion f1: 0.90140845
+APCE precision: 0.8152173913043478	APCE recall: 0.65789474	APCE f1: 0.72815534
+pair precision: 0.7709923664122137	pair recall: 0.70138889	pair f1: 0.73454545
+triple precision: 0.6461538461538462	triple recall: 0.58333333	triple f1: 0.61313869
+Epoch:61
+('Loss:', 1111.641562461853)
+('KL_Loss:', 738.9238661487576)
+aspect precision: 0.9292929292929293	aspect recall: 0.80701754	aspect f1: 0.86384977
+opinion precision: 0.9295774647887324	opinion recall: 0.89189189	opinion f1: 0.91034483
+APCE precision: 0.8	APCE recall: 0.66666667	APCE f1: 0.72727273
+pair precision: 0.7744360902255639	pair recall: 0.71527778	pair f1: 0.74368231
+triple precision: 0.6615384615384615	triple recall: 0.59722222	triple f1: 0.62773723
+Epoch:62
+('Loss:', 1063.6659898757935)
+('KL_Loss:', 731.0363703167295)
+aspect precision: 0.92	aspect recall: 0.80701754	aspect f1: 0.85981308
+opinion precision: 0.9420289855072463	opinion recall: 0.87837838	opinion f1: 0.90909091
+APCE precision: 0.8105263157894737	APCE recall: 0.67543860	APCE f1: 0.73684211
+pair precision: 0.7573529411764706	pair recall: 0.71527778	pair f1: 0.73571429
+triple precision: 0.6492537313432836	triple recall: 0.60416667	triple f1: 0.62589928
+Epoch:63
+('Loss:', 1072.3522510528564)
+('KL_Loss:', 746.7818749294056)
+aspect precision: 0.9375	aspect recall: 0.78947368	aspect f1: 0.85714286
+opinion precision: 0.9142857142857143	opinion recall: 0.86486486	opinion f1: 0.88888889
+APCE precision: 0.8241758241758241	APCE recall: 0.65789474	APCE f1: 0.73170732
+pair precision: 0.7619047619047619	pair recall: 0.66666667	pair f1: 0.71111111
+triple precision: 0.6612903225806451	triple recall: 0.56944444	triple f1: 0.61194030
+Epoch:64
+('Loss:', 1108.7816104888916)
+('KL_Loss:', 738.3557618016939)
+aspect precision: 0.8796296296296297	aspect recall: 0.83333333	aspect f1: 0.85585586
+opinion precision: 0.9154929577464789	opinion recall: 0.87837838	opinion f1: 0.89655172
+APCE precision: 0.81	APCE recall: 0.71052632	APCE f1: 0.75700935
+pair precision: 0.673202614379085	pair recall: 0.71527778	pair f1: 0.69360269
+triple precision: 0.6040268456375839	triple recall: 0.62500000	triple f1: 0.61433447
+Epoch:65
+('Loss:', 1143.3126468658447)
+('KL_Loss:', 749.3163371033522)
+aspect precision: 0.9	aspect recall: 0.78947368	aspect f1: 0.84112150
+opinion precision: 0.8918918918918919	opinion recall: 0.89189189	opinion f1: 0.89189189
+APCE precision: 0.7857142857142857	APCE recall: 0.67543860	APCE f1: 0.72641509
+pair precision: 0.6866666666666666	pair recall: 0.71527778	pair f1: 0.70068027
+triple precision: 0.6170212765957447	triple recall: 0.60416667	triple f1: 0.61052632
+Epoch:66
+('Loss:', 1146.1462879180908)
+('KL_Loss:', 738.4265493698439)
+aspect precision: 0.9662921348314607	aspect recall: 0.75438596	aspect f1: 0.84729064
+opinion precision: 0.9295774647887324	opinion recall: 0.89189189	opinion f1: 0.91034483
+APCE precision: 0.8352941176470589	APCE recall: 0.62280702	APCE f1: 0.71356784
+pair precision: 0.7936507936507936	pair recall: 0.69444444	pair f1: 0.74074074
+triple precision: 0.6774193548387096	triple recall: 0.58333333	triple f1: 0.62686567
+Epoch:67
+('Loss:', 1144.2573013305664)
+('KL_Loss:', 732.7209116103444)
+aspect precision: 0.9117647058823529	aspect recall: 0.81578947	aspect f1: 0.86111111
+opinion precision: 0.9552238805970149	opinion recall: 0.86486486	opinion f1: 0.90780142
+APCE precision: 0.7978723404255319	APCE recall: 0.65789474	APCE f1: 0.72115385
+pair precision: 0.7441860465116279	pair recall: 0.66666667	pair f1: 0.70329670
+triple precision: 0.6456692913385826	triple recall: 0.56944444	triple f1: 0.60516605
+Epoch:68
+('Loss:', 1098.3305678367615)
+('KL_Loss:', 733.8308085228296)
+aspect precision: 0.8962264150943396	aspect recall: 0.83333333	aspect f1: 0.86363636
+opinion precision: 0.9054054054054054	opinion recall: 0.90540541	opinion f1: 0.90540541
+APCE precision: 0.7938144329896907	APCE recall: 0.67543860	APCE f1: 0.72985782
+pair precision: 0.7163120567375887	pair recall: 0.70138889	pair f1: 0.70877193
+triple precision: 0.6204379562043796	triple recall: 0.59027778	triple f1: 0.60498221
+Epoch:69
+('Loss:', 1014.6109981536865)
+('KL_Loss:', 738.6768993125513)
+aspect precision: 0.93	aspect recall: 0.81578947	aspect f1: 0.86915888
+opinion precision: 0.9384615384615385	opinion recall: 0.82432432	opinion f1: 0.87769784
+APCE precision: 0.8085106382978723	APCE recall: 0.66666667	APCE f1: 0.73076923
+pair precision: 0.7461538461538462	pair recall: 0.67361111	pair f1: 0.70802920
+triple precision: 0.6307692307692307	triple recall: 0.56944444	triple f1: 0.59854015
+Epoch:70
+('Loss:', 1010.6930847167969)
+('KL_Loss:', 725.003013878602)
+aspect precision: 0.9183673469387755	aspect recall: 0.78947368	aspect f1: 0.84905660
+opinion precision: 0.9420289855072463	opinion recall: 0.87837838	opinion f1: 0.90909091
+APCE precision: 0.7978723404255319	APCE recall: 0.65789474	APCE f1: 0.72115385
+pair precision: 0.7226277372262774	pair recall: 0.68750000	pair f1: 0.70462633
+triple precision: 0.6131386861313869	triple recall: 0.58333333	triple f1: 0.59786477
+Epoch:71
+('Loss:', 1068.353157043457)
+('KL_Loss:', 742.7492783326848)
+aspect precision: 0.9368421052631579	aspect recall: 0.78070175	aspect f1: 0.85167464
+opinion precision: 0.9402985074626866	opinion recall: 0.85135135	opinion f1: 0.89361702
+APCE precision: 0.8202247191011236	APCE recall: 0.64035088	APCE f1: 0.71921182
+pair precision: 0.75	pair recall: 0.66666667	pair f1: 0.70588235
+triple precision: 0.6535433070866141	triple recall: 0.57638889	triple f1: 0.61254613
+Epoch:72
+('Loss:', 1071.7358093261719)
+('KL_Loss:', 734.739715432924)
+aspect precision: 0.9361702127659575	aspect recall: 0.77192982	aspect f1: 0.84615385
+opinion precision: 0.9264705882352942	opinion recall: 0.85135135	opinion f1: 0.88732394
+APCE precision: 0.8314606741573034	APCE recall: 0.64912281	APCE f1: 0.72906404
+pair precision: 0.7916666666666666	pair recall: 0.65972222	pair f1: 0.71969697
+triple precision: 0.6864406779661016	triple recall: 0.56250000	triple f1: 0.61832061
+Epoch:73
+('Loss:', 1005.324520111084)
+('KL_Loss:', 736.2783757653401)
+aspect precision: 0.897196261682243	aspect recall: 0.84210526	aspect f1: 0.86877828
+opinion precision: 0.9295774647887324	opinion recall: 0.89189189	opinion f1: 0.91034483
+APCE precision: 0.7669902912621359	APCE recall: 0.69298246	APCE f1: 0.72811060
+pair precision: 0.6463414634146342	pair recall: 0.73611111	pair f1: 0.68831169
+triple precision: 0.546583850931677	triple recall: 0.61111111	triple f1: 0.57704918
+Epoch:74
+('Loss:', 971.2721719741821)
+('KL_Loss:', 729.5142269327869)
+aspect precision: 0.9074074074074074	aspect recall: 0.85964912	aspect f1: 0.88288288
+opinion precision: 0.9264705882352942	opinion recall: 0.85135135	opinion f1: 0.88732394
+APCE precision: 0.7843137254901961	APCE recall: 0.70175439	APCE f1: 0.74074074
+pair precision: 0.6797385620915033	pair recall: 0.72222222	pair f1: 0.70033670
+triple precision: 0.56	triple recall: 0.58333333	triple f1: 0.57142857
+Epoch:75
+('Loss:', 953.8187046051025)
+('KL_Loss:', 726.4425989968771)
+aspect precision: 0.9090909090909091	aspect recall: 0.78947368	aspect f1: 0.84507042
+opinion precision: 0.9253731343283582	opinion recall: 0.83783784	opinion f1: 0.87943262
+APCE precision: 0.776595744680851	APCE recall: 0.64035088	APCE f1: 0.70192308
+pair precision: 0.7518796992481203	pair recall: 0.69444444	pair f1: 0.72202166
+triple precision: 0.6335877862595419	triple recall: 0.57638889	triple f1: 0.60363636
+Epoch:76
+('Loss:', 1070.4384560585022)
+('KL_Loss:', 735.4292430470518)
+aspect precision: 0.967032967032967	aspect recall: 0.77192982	aspect f1: 0.85853659
+opinion precision: 0.9402985074626866	opinion recall: 0.85135135	opinion f1: 0.89361702
+APCE precision: 0.8505747126436781	APCE recall: 0.64912281	APCE f1: 0.73631841
+pair precision: 0.8135593220338984	pair recall: 0.66666667	pair f1: 0.73282443
+triple precision: 0.6890756302521008	triple recall: 0.56944444	triple f1: 0.62357414
+Epoch:77
+('Loss:', 1026.6910724639893)
+('KL_Loss:', 722.3411255206585)
+aspect precision: 0.967032967032967	aspect recall: 0.77192982	aspect f1: 0.85853659
+opinion precision: 0.9393939393939394	opinion recall: 0.83783784	opinion f1: 0.88571429
+APCE precision: 0.8470588235294118	APCE recall: 0.63157895	APCE f1: 0.72361809
+pair precision: 0.8317757009345794	pair recall: 0.61805556	pair f1: 0.70916335
+triple precision: 0.7009345794392523	triple recall: 0.52083333	triple f1: 0.59760956
+Epoch:78
+('Loss:', 1117.8100500106812)
+('KL_Loss:', 736.5673591721843)
+aspect precision: 0.9047619047619048	aspect recall: 0.83333333	aspect f1: 0.86757991
+opinion precision: 0.8904109589041096	opinion recall: 0.87837838	opinion f1: 0.88435374
+APCE precision: 0.7596153846153846	APCE recall: 0.69298246	APCE f1: 0.72477064
+pair precision: 0.65625	pair recall: 0.72916667	pair f1: 0.69078947
+triple precision: 0.5419354838709678	triple recall: 0.58333333	triple f1: 0.56187291
+Epoch:79
+('Loss:', 1116.4480590820312)
+('KL_Loss:', 727.7527538790652)
+aspect precision: 0.92	aspect recall: 0.80701754	aspect f1: 0.85981308
+opinion precision: 0.88	opinion recall: 0.89189189	opinion f1: 0.88590604
+APCE precision: 0.7857142857142857	APCE recall: 0.67543860	APCE f1: 0.72641509
+pair precision: 0.7357142857142858	pair recall: 0.71527778	pair f1: 0.72535211
+triple precision: 0.6268656716417911	triple recall: 0.58333333	triple f1: 0.60431655
+Epoch:80
+('Loss:', 933.7754621505737)
+('KL_Loss:', 736.8461019373215)
+aspect precision: 0.9056603773584906	aspect recall: 0.84210526	aspect f1: 0.87272727
+opinion precision: 0.9253731343283582	opinion recall: 0.83783784	opinion f1: 0.87943262
+APCE precision: 0.797979797979798	APCE recall: 0.69298246	APCE f1: 0.74178404
+pair precision: 0.7034482758620689	pair recall: 0.70833333	pair f1: 0.70588235
+triple precision: 0.5985915492957746	triple recall: 0.59027778	triple f1: 0.59440559
+Epoch:81
+('Loss:', 968.4824981689453)
+('KL_Loss:', 734.2974559427337)
+aspect precision: 0.9270833333333334	aspect recall: 0.78070175	aspect f1: 0.84761905
+opinion precision: 0.9178082191780822	opinion recall: 0.90540541	opinion f1: 0.91156463
+APCE precision: 0.8260869565217391	APCE recall: 0.66666667	APCE f1: 0.73786408
+pair precision: 0.7557251908396947	pair recall: 0.68750000	pair f1: 0.72000000
+triple precision: 0.671875	triple recall: 0.59722222	triple f1: 0.63235294
+Epoch:82
+('Loss:', 939.2826218605042)
+('KL_Loss:', 715.9296650671715)
+aspect precision: 0.9473684210526315	aspect recall: 0.78947368	aspect f1: 0.86124402
+opinion precision: 0.9264705882352942	opinion recall: 0.85135135	opinion f1: 0.88732394
+APCE precision: 0.7956989247311828	APCE recall: 0.64912281	APCE f1: 0.71497585
+pair precision: 0.75	pair recall: 0.68750000	pair f1: 0.71739130
+triple precision: 0.6434108527131783	triple recall: 0.57638889	triple f1: 0.60805861
+Epoch:83
+('Loss:', 935.3971633911133)
+('KL_Loss:', 722.3698598080092)
+aspect precision: 0.9278350515463918	aspect recall: 0.78947368	aspect f1: 0.85308057
+opinion precision: 0.9054054054054054	opinion recall: 0.90540541	opinion f1: 0.90540541
+APCE precision: 0.7978723404255319	APCE recall: 0.65789474	APCE f1: 0.72115385
+pair precision: 0.7445255474452555	pair recall: 0.70833333	pair f1: 0.72597865
+triple precision: 0.6439393939393939	triple recall: 0.59027778	triple f1: 0.61594203
+Epoch:84
+('Loss:', 985.6648349761963)
+('KL_Loss:', 718.6946190854604)
+aspect precision: 0.946236559139785	aspect recall: 0.77192982	aspect f1: 0.85024155
+opinion precision: 0.9142857142857143	opinion recall: 0.86486486	opinion f1: 0.88888889
+APCE precision: 0.8255813953488372	APCE recall: 0.62280702	APCE f1: 0.71000000
+pair precision: 0.7741935483870968	pair recall: 0.66666667	pair f1: 0.71641791
+triple precision: 0.6747967479674797	triple recall: 0.57638889	triple f1: 0.62172285
+Epoch:85
+('Loss:', 968.5679664611816)
+('KL_Loss:', 733.5279215582559)
+aspect precision: 0.9361702127659575	aspect recall: 0.77192982	aspect f1: 0.84615385
+opinion precision: 0.9130434782608695	opinion recall: 0.85135135	opinion f1: 0.88111888
+APCE precision: 0.8222222222222222	APCE recall: 0.64912281	APCE f1: 0.72549020
+pair precision: 0.75	pair recall: 0.66666667	pair f1: 0.70588235
+triple precision: 0.6456692913385826	triple recall: 0.56944444	triple f1: 0.60516605
+Epoch:86
+('Loss:', 913.9171590805054)
+('KL_Loss:', 705.1833434015296)
+aspect precision: 0.945054945054945	aspect recall: 0.75438596	aspect f1: 0.83902439
+opinion precision: 0.9264705882352942	opinion recall: 0.85135135	opinion f1: 0.88732394
+APCE precision: 0.8314606741573034	APCE recall: 0.64912281	APCE f1: 0.72906404
+pair precision: 0.7723577235772358	pair recall: 0.65972222	pair f1: 0.71161049
+triple precision: 0.6721311475409836	triple recall: 0.56944444	triple f1: 0.61654135
+Epoch:87
+('Loss:', 956.9211492538452)
+('KL_Loss:', 715.3235404819801)
+aspect precision: 0.9108910891089109	aspect recall: 0.80701754	aspect f1: 0.85581395
+opinion precision: 0.9242424242424242	opinion recall: 0.82432432	opinion f1: 0.87142857
+APCE precision: 0.8	APCE recall: 0.66666667	APCE f1: 0.72727273
+pair precision: 0.7205882352941176	pair recall: 0.68055556	pair f1: 0.70000000
+triple precision: 0.6148148148148148	triple recall: 0.57638889	triple f1: 0.59498208
+Epoch:88
+('Loss:', 941.9011902809143)
+('KL_Loss:', 713.8164850057038)
+aspect precision: 0.8727272727272727	aspect recall: 0.84210526	aspect f1: 0.85714286
+opinion precision: 0.9154929577464789	opinion recall: 0.87837838	opinion f1: 0.89655172
+APCE precision: 0.7647058823529411	APCE recall: 0.68421053	APCE f1: 0.72222222
+pair precision: 0.7074829931972789	pair recall: 0.72222222	pair f1: 0.71477663
+triple precision: 0.6304347826086957	triple recall: 0.60416667	triple f1: 0.61702128
+Epoch:89
+('Loss:', 910.088297367096)
+('KL_Loss:', 722.1674005792394)
+aspect precision: 0.9405940594059405	aspect recall: 0.83333333	aspect f1: 0.88372093
+opinion precision: 0.9130434782608695	opinion recall: 0.85135135	opinion f1: 0.88111888
+APCE precision: 0.7959183673469388	APCE recall: 0.68421053	APCE f1: 0.73584906
+pair precision: 0.7323943661971831	pair recall: 0.72222222	pair f1: 0.72727273
+triple precision: 0.6099290780141844	triple recall: 0.59722222	triple f1: 0.60350877
+Epoch:90
+('Loss:', 936.5557818412781)
+('KL_Loss:', 718.2051024392733)
+aspect precision: 0.9306930693069307	aspect recall: 0.82456140	aspect f1: 0.87441860
+opinion precision: 0.9264705882352942	opinion recall: 0.85135135	opinion f1: 0.88732394
+APCE precision: 0.8172043010752689	APCE recall: 0.66666667	APCE f1: 0.73429952
+pair precision: 0.7410071942446043	pair recall: 0.71527778	pair f1: 0.72791519
+triple precision: 0.635036496350365	triple recall: 0.60416667	triple f1: 0.61921708
+Epoch:91
+('Loss:', 866.8917737007141)
+('KL_Loss:', 709.5897931287006)
+aspect precision: 0.9444444444444444	aspect recall: 0.74561404	aspect f1: 0.83333333
+opinion precision: 0.927536231884058	opinion recall: 0.86486486	opinion f1: 0.89510490
+APCE precision: 0.8045977011494253	APCE recall: 0.61403509	APCE f1: 0.69651741
+pair precision: 0.8103448275862069	pair recall: 0.65277778	pair f1: 0.72307692
+triple precision: 0.6810344827586207	triple recall: 0.54861111	triple f1: 0.60769231
+Epoch:92
+('Loss:', 869.7921242713928)
+('KL_Loss:', 709.8102944743488)
+aspect precision: 0.9545454545454546	aspect recall: 0.73684211	aspect f1: 0.83168317
+opinion precision: 0.927536231884058	opinion recall: 0.86486486	opinion f1: 0.89510490
+APCE precision: 0.8470588235294118	APCE recall: 0.63157895	APCE f1: 0.72361809
+pair precision: 0.8053097345132744	pair recall: 0.63194444	pair f1: 0.70817121
+triple precision: 0.7043478260869566	triple recall: 0.56250000	triple f1: 0.62548263
+Epoch:93
+('Loss:', 857.9967670440674)
+('KL_Loss:', 724.2633054334591)
+aspect precision: 0.946236559139785	aspect recall: 0.77192982	aspect f1: 0.85024155
+opinion precision: 0.9264705882352942	opinion recall: 0.85135135	opinion f1: 0.88732394
+APCE precision: 0.7802197802197802	APCE recall: 0.62280702	APCE f1: 0.69268293
+pair precision: 0.7851239669421488	pair recall: 0.65972222	pair f1: 0.71698113
+triple precision: 0.675	triple recall: 0.56250000	triple f1: 0.61363636
+Epoch:94
+('Loss:', 890.2513136863708)
+('KL_Loss:', 714.9077291344283)
+aspect precision: 0.9444444444444444	aspect recall: 0.74561404	aspect f1: 0.83333333
+opinion precision: 0.9285714285714286	opinion recall: 0.87837838	opinion f1: 0.90277778
+APCE precision: 0.8131868131868132	APCE recall: 0.64912281	APCE f1: 0.72195122
+pair precision: 0.7251908396946565	pair recall: 0.65972222	pair f1: 0.69090909
+triple precision: 0.6456692913385826	triple recall: 0.56944444	triple f1: 0.60516605
+Epoch:95
+('Loss:', 922.6777367591858)
+('KL_Loss:', 709.1936510160083)
+aspect precision: 0.9479166666666666	aspect recall: 0.79824561	aspect f1: 0.86666667
+opinion precision: 0.9117647058823529	opinion recall: 0.83783784	opinion f1: 0.87323944
+APCE precision: 0.8461538461538461	APCE recall: 0.67543860	APCE f1: 0.75121951
+pair precision: 0.7723577235772358	pair recall: 0.65972222	pair f1: 0.71161049
+triple precision: 0.6859504132231405	triple recall: 0.57638889	triple f1: 0.62641509
+Epoch:96
+('Loss:', 863.882716178894)
+('KL_Loss:', 723.5632488204)
+aspect precision: 0.967032967032967	aspect recall: 0.77192982	aspect f1: 0.85853659
+opinion precision: 0.9264705882352942	opinion recall: 0.85135135	opinion f1: 0.88732394
+APCE precision: 0.8604651162790697	APCE recall: 0.64912281	APCE f1: 0.74000000
+pair precision: 0.7692307692307693	pair recall: 0.62500000	pair f1: 0.68965517
+triple precision: 0.6869565217391305	triple recall: 0.54861111	triple f1: 0.61003861
+Epoch:97
+('Loss:', 841.6727924346924)
+('KL_Loss:', 702.692957149115)
+aspect precision: 0.9777777777777777	aspect recall: 0.77192982	aspect f1: 0.86274510
+opinion precision: 0.9402985074626866	opinion recall: 0.85135135	opinion f1: 0.89361702
+APCE precision: 0.8588235294117647	APCE recall: 0.64035088	APCE f1: 0.73366834
+pair precision: 0.8	pair recall: 0.66666667	pair f1: 0.72727273
+triple precision: 0.7	triple recall: 0.58333333	triple f1: 0.63636364
+Epoch:98
+('Loss:', 916.2465953826904)
+('KL_Loss:', 714.2847303726619)
+aspect precision: 0.9555555555555556	aspect recall: 0.75438596	aspect f1: 0.84313725
+opinion precision: 0.9285714285714286	opinion recall: 0.87837838	opinion f1: 0.90277778
+APCE precision: 0.8333333333333334	APCE recall: 0.61403509	APCE f1: 0.70707071
+pair precision: 0.8317757009345794	pair recall: 0.61805556	pair f1: 0.70916335
+triple precision: 0.7037037037037037	triple recall: 0.52777778	triple f1: 0.60317460
+Epoch:99
+('Loss:', 958.4140000343323)
+('KL_Loss:', 704.196698956346)
+aspect precision: 0.9387755102040817	aspect recall: 0.80701754	aspect f1: 0.86792453
+opinion precision: 0.9166666666666666	opinion recall: 0.89189189	opinion f1: 0.90410959
+APCE precision: 0.8210526315789474	APCE recall: 0.68421053	APCE f1: 0.74641148
+pair precision: 0.7835820895522388	pair recall: 0.72916667	pair f1: 0.75539568
+triple precision: 0.6541353383458647	triple recall: 0.60416667	triple f1: 0.62815884
+Epoch:100
+('Loss:', 961.4496006965637)
+('KL_Loss:', 712.5385616539872)
+aspect precision: 0.9550561797752809	aspect recall: 0.74561404	aspect f1: 0.83743842
+opinion precision: 0.9411764705882353	opinion recall: 0.86486486	opinion f1: 0.90140845
+APCE precision: 0.8214285714285714	APCE recall: 0.60526316	APCE f1: 0.69696970
+pair precision: 0.8230088495575221	pair recall: 0.64583333	pair f1: 0.72373541
+triple precision: 0.6902654867256637	triple recall: 0.54166667	triple f1: 0.60700389
+Epoch:101
+('Loss:', 874.7426900863647)
+('KL_Loss:', 709.8695651198562)
+aspect precision: 0.9285714285714286	aspect recall: 0.79824561	aspect f1: 0.85849057
+opinion precision: 0.9154929577464789	opinion recall: 0.87837838	opinion f1: 0.89655172
+APCE precision: 0.8043478260869565	APCE recall: 0.64912281	APCE f1: 0.71844660
+pair precision: 0.7279411764705882	pair recall: 0.68750000	pair f1: 0.70714286
+triple precision: 0.6074074074074074	triple recall: 0.56944444	triple f1: 0.58781362
+Epoch:102
+('Loss:', 852.7899422645569)
+('KL_Loss:', 695.4793756223544)
+aspect precision: 0.9882352941176471	aspect recall: 0.73684211	aspect f1: 0.84422111
+opinion precision: 0.9142857142857143	opinion recall: 0.86486486	opinion f1: 0.88888889
+APCE precision: 0.8409090909090909	APCE recall: 0.64912281	APCE f1: 0.73267327
+pair precision: 0.8157894736842105	pair recall: 0.64583333	pair f1: 0.72093023
+triple precision: 0.7094017094017094	triple recall: 0.57638889	triple f1: 0.63601533
+Epoch:103
+('Loss:', 880.0358061790466)
+('KL_Loss:', 702.8867889275132)
+aspect precision: 0.956989247311828	aspect recall: 0.78070175	aspect f1: 0.85990338
+opinion precision: 0.9552238805970149	opinion recall: 0.86486486	opinion f1: 0.90780142
+APCE precision: 0.8390804597701149	APCE recall: 0.64035088	APCE f1: 0.72636816
+pair precision: 0.825	pair recall: 0.68750000	pair f1: 0.75000000
+triple precision: 0.7142857142857143	triple recall: 0.59027778	triple f1: 0.64638783
+Epoch:104
+('Loss:', 883.8190655708313)
+('KL_Loss:', 714.3435303035195)
+aspect precision: 0.9292929292929293	aspect recall: 0.80701754	aspect f1: 0.86384977
+opinion precision: 0.9041095890410958	opinion recall: 0.89189189	opinion f1: 0.89795918
+APCE precision: 0.8085106382978723	APCE recall: 0.66666667	APCE f1: 0.73076923
+pair precision: 0.75	pair recall: 0.70833333	pair f1: 0.72857143
+triple precision: 0.6567164179104478	triple recall: 0.61111111	triple f1: 0.63309353
+Epoch:105
+('Loss:', 892.3335976600647)
+('KL_Loss:', 712.1221002460916)
+aspect precision: 0.9878048780487805	aspect recall: 0.71052632	aspect f1: 0.82653061
+opinion precision: 0.9411764705882353	opinion recall: 0.86486486	opinion f1: 0.90140845
+APCE precision: 0.8625	APCE recall: 0.60526316	APCE f1: 0.71134021
+pair precision: 0.822429906542056	pair recall: 0.61111111	pair f1: 0.70119522
+triple precision: 0.7289719626168224	triple recall: 0.54166667	triple f1: 0.62151394
+Epoch:106
+('Loss:', 864.6132535934448)
+('KL_Loss:', 709.0225354285466)
+aspect precision: 0.9038461538461539	aspect recall: 0.82456140	aspect f1: 0.86238532
+opinion precision: 0.9375	opinion recall: 0.81081081	opinion f1: 0.86956522
+APCE precision: 0.78125	APCE recall: 0.65789474	APCE f1: 0.71428571
+pair precision: 0.7279411764705882	pair recall: 0.68750000	pair f1: 0.70714286
+triple precision: 0.6090225563909775	triple recall: 0.56250000	triple f1: 0.58483755
+Epoch:107
+('Loss:', 865.9702568054199)
+('KL_Loss:', 699.3418345745864)
+aspect precision: 0.9550561797752809	aspect recall: 0.74561404	aspect f1: 0.83743842
+opinion precision: 0.9130434782608695	opinion recall: 0.85135135	opinion f1: 0.88111888
+APCE precision: 0.8095238095238095	APCE recall: 0.59649123	APCE f1: 0.68686869
+pair precision: 0.8157894736842105	pair recall: 0.64583333	pair f1: 0.72093023
+triple precision: 0.6754385964912281	triple recall: 0.53472222	triple f1: 0.59689922
+Epoch:108
+('Loss:', 875.7916102409363)
+('KL_Loss:', 731.843204174232)
+aspect precision: 0.9207920792079208	aspect recall: 0.81578947	aspect f1: 0.86511628
+opinion precision: 0.9264705882352942	opinion recall: 0.85135135	opinion f1: 0.88732394
+APCE precision: 0.7872340425531915	APCE recall: 0.64912281	APCE f1: 0.71153846
+pair precision: 0.7637795275590551	pair recall: 0.67361111	pair f1: 0.71586716
+triple precision: 0.626984126984127	triple recall: 0.54861111	triple f1: 0.58518519
+Epoch:109
+('Loss:', 930.4908666610718)
+('KL_Loss:', 721.2052774472975)
+aspect precision: 0.9230769230769231	aspect recall: 0.84210526	aspect f1: 0.88073394
+opinion precision: 0.9285714285714286	opinion recall: 0.87837838	opinion f1: 0.90277778
+APCE precision: 0.8260869565217391	APCE recall: 0.66666667	APCE f1: 0.73786408
+pair precision: 0.7886178861788617	pair recall: 0.67361111	pair f1: 0.72659176
+triple precision: 0.6776859504132231	triple recall: 0.56944444	triple f1: 0.61886792
+Epoch:110
+('Loss:', 900.7811813354492)
+('KL_Loss:', 710.2378106070523)
+aspect precision: 0.9292929292929293	aspect recall: 0.80701754	aspect f1: 0.86384977
+opinion precision: 0.9253731343283582	opinion recall: 0.83783784	opinion f1: 0.87943262
+APCE precision: 0.7956989247311828	APCE recall: 0.64912281	APCE f1: 0.71497585
+pair precision: 0.7461538461538462	pair recall: 0.67361111	pair f1: 0.70802920
+triple precision: 0.6171875	triple recall: 0.54861111	triple f1: 0.58088235
+Epoch:111
+('Loss:', 871.7690329551697)
+('KL_Loss:', 708.6489751440245)
+aspect precision: 0.9456521739130435	aspect recall: 0.76315789	aspect f1: 0.84466019
+opinion precision: 0.9393939393939394	opinion recall: 0.83783784	opinion f1: 0.88571429
+APCE precision: 0.8255813953488372	APCE recall: 0.62280702	APCE f1: 0.71000000
+pair precision: 0.8198198198198198	pair recall: 0.63194444	pair f1: 0.71372549
+triple precision: 0.7117117117117117	triple recall: 0.54861111	triple f1: 0.61960784
+Epoch:112
+('Loss:', 888.1949324607849)
+('KL_Loss:', 711.3996683740232)
+aspect precision: 0.9292929292929293	aspect recall: 0.80701754	aspect f1: 0.86384977
+opinion precision: 0.9230769230769231	opinion recall: 0.81081081	opinion f1: 0.86330935
+APCE precision: 0.8	APCE recall: 0.63157895	APCE f1: 0.70588235
+pair precision: 0.8050847457627118	pair recall: 0.65972222	pair f1: 0.72519084
+triple precision: 0.6694915254237288	triple recall: 0.54861111	triple f1: 0.60305344
+Epoch:113
+('Loss:', 887.1011347770691)
+('KL_Loss:', 704.8769712327544)
+aspect precision: 0.897196261682243	aspect recall: 0.84210526	aspect f1: 0.86877828
+opinion precision: 0.9384615384615385	opinion recall: 0.82432432	opinion f1: 0.87769784
+APCE precision: 0.7978723404255319	APCE recall: 0.65789474	APCE f1: 0.72115385
+pair precision: 0.7103448275862069	pair recall: 0.71527778	pair f1: 0.71280277
+triple precision: 0.5815602836879432	triple recall: 0.56944444	triple f1: 0.57543860
+Epoch:114
+('Loss:', 853.5078115463257)
+('KL_Loss:', 690.3056841475391)
+aspect precision: 0.9215686274509803	aspect recall: 0.82456140	aspect f1: 0.87037037
+opinion precision: 0.927536231884058	opinion recall: 0.86486486	opinion f1: 0.89510490
+APCE precision: 0.8144329896907216	APCE recall: 0.69298246	APCE f1: 0.74881517
+pair precision: 0.7299270072992701	pair recall: 0.69444444	pair f1: 0.71174377
+triple precision: 0.6268656716417911	triple recall: 0.58333333	triple f1: 0.60431655
+Epoch:115
+('Loss:', 990.6314978599548)
+('KL_Loss:', 708.6420357411941)
+aspect precision: 0.9306930693069307	aspect recall: 0.82456140	aspect f1: 0.87441860
+opinion precision: 0.8873239436619719	opinion recall: 0.85135135	opinion f1: 0.86896552
+APCE precision: 0.7938144329896907	APCE recall: 0.67543860	APCE f1: 0.72985782
+pair precision: 0.673469387755102	pair recall: 0.68750000	pair f1: 0.68041237
+triple precision: 0.5774647887323944	triple recall: 0.56944444	triple f1: 0.57342657
+Epoch:116
+('Loss:', 958.6904125213623)
+('KL_Loss:', 709.4712459999489)
+aspect precision: 0.9292929292929293	aspect recall: 0.80701754	aspect f1: 0.86384977
+opinion precision: 0.95	opinion recall: 0.77027027	opinion f1: 0.85074627
+APCE precision: 0.8089887640449438	APCE recall: 0.63157895	APCE f1: 0.70935961
+pair precision: 0.743801652892562	pair recall: 0.62500000	pair f1: 0.67924528
+triple precision: 0.6198347107438017	triple recall: 0.52083333	triple f1: 0.56603774
+Epoch:117
+('Loss:', 891.9226789474487)
+('KL_Loss:', 697.9564960937457)
+aspect precision: 0.9090909090909091	aspect recall: 0.78947368	aspect f1: 0.84507042
+opinion precision: 0.9014084507042254	opinion recall: 0.86486486	opinion f1: 0.88275862
+APCE precision: 0.7755102040816326	APCE recall: 0.66666667	APCE f1: 0.71698113
+pair precision: 0.6938775510204082	pair recall: 0.70833333	pair f1: 0.70103093
+triple precision: 0.5862068965517241	triple recall: 0.59027778	triple f1: 0.58823529
+Epoch:118
+('Loss:', 850.0441384315491)
+('KL_Loss:', 701.4949455120568)
+aspect precision: 0.9230769230769231	aspect recall: 0.84210526	aspect f1: 0.88073394
+opinion precision: 0.9027777777777778	opinion recall: 0.87837838	opinion f1: 0.89041096
+APCE precision: 0.7959183673469388	APCE recall: 0.68421053	APCE f1: 0.73584906
+pair precision: 0.7410071942446043	pair recall: 0.71527778	pair f1: 0.72791519
+triple precision: 0.6397058823529411	triple recall: 0.60416667	triple f1: 0.62142857
+Epoch:119
+('Loss:', 855.7480673789978)
+('KL_Loss:', 695.6869316430794)
+aspect precision: 0.9405940594059405	aspect recall: 0.83333333	aspect f1: 0.88372093
+opinion precision: 0.9253731343283582	opinion recall: 0.83783784	opinion f1: 0.87943262
+APCE precision: 0.79	APCE recall: 0.69298246	APCE f1: 0.73831776
+pair precision: 0.7092198581560284	pair recall: 0.69444444	pair f1: 0.70175439
+triple precision: 0.5899280575539568	triple recall: 0.56944444	triple f1: 0.57950530
+Epoch:120
+('Loss:', 842.8570475578308)
+('KL_Loss:', 696.4014825041564)
+aspect precision: 0.9134615384615384	aspect recall: 0.83333333	aspect f1: 0.87155963
+opinion precision: 0.9090909090909091	opinion recall: 0.81081081	opinion f1: 0.85714286
+APCE precision: 0.7647058823529411	APCE recall: 0.68421053	APCE f1: 0.72222222
+pair precision: 0.6944444444444444	pair recall: 0.69444444	pair f1: 0.69444444
+triple precision: 0.5857142857142857	triple recall: 0.56944444	triple f1: 0.57746479
+Epoch:121
+('Loss:', 979.7195000648499)
+('KL_Loss:', 691.2304287120395)
+aspect precision: 0.9306930693069307	aspect recall: 0.82456140	aspect f1: 0.87441860
+opinion precision: 0.8918918918918919	opinion recall: 0.89189189	opinion f1: 0.89189189
+APCE precision: 0.7821782178217822	APCE recall: 0.69298246	APCE f1: 0.73488372
+pair precision: 0.6566265060240963	pair recall: 0.75694444	pair f1: 0.70322581
+triple precision: 0.5590062111801242	triple recall: 0.62500000	triple f1: 0.59016393
+Epoch:122
+('Loss:', 924.2184891700745)
+('KL_Loss:', 694.6979113973263)
+aspect precision: 0.8952380952380953	aspect recall: 0.82456140	aspect f1: 0.85844749
+opinion precision: 0.9027777777777778	opinion recall: 0.87837838	opinion f1: 0.89041096
+APCE precision: 0.7745098039215687	APCE recall: 0.69298246	APCE f1: 0.73148148
+pair precision: 0.6666666666666666	pair recall: 0.72222222	pair f1: 0.69333333
+triple precision: 0.564935064935065	triple recall: 0.60416667	triple f1: 0.58389262
+Epoch:123
+('Loss:', 866.1267337799072)
+('KL_Loss:', 682.1035835588929)
+aspect precision: 0.9207920792079208	aspect recall: 0.81578947	aspect f1: 0.86511628
+opinion precision: 0.9264705882352942	opinion recall: 0.85135135	opinion f1: 0.88732394
+APCE precision: 0.8241758241758241	APCE recall: 0.65789474	APCE f1: 0.73170732
+pair precision: 0.7741935483870968	pair recall: 0.66666667	pair f1: 0.71641791
+triple precision: 0.680327868852459	triple recall: 0.57638889	triple f1: 0.62406015
+Epoch:124
+('Loss:', 814.4075527191162)
+('KL_Loss:', 690.1906791915666)
+aspect precision: 0.9238095238095239	aspect recall: 0.85087719	aspect f1: 0.88584475
+opinion precision: 0.9375	opinion recall: 0.81081081	opinion f1: 0.86956522
+APCE precision: 0.8210526315789474	APCE recall: 0.68421053	APCE f1: 0.74641148
+pair precision: 0.7593984962406015	pair recall: 0.70138889	pair f1: 0.72924188
+triple precision: 0.6439393939393939	triple recall: 0.59027778	triple f1: 0.61594203
+Epoch:125
+('Loss:', 841.9154949188232)
+('KL_Loss:', 682.7806056512169)
+aspect precision: 0.9292929292929293	aspect recall: 0.80701754	aspect f1: 0.86384977
+opinion precision: 0.8888888888888888	opinion recall: 0.86486486	opinion f1: 0.87671233
+APCE precision: 0.7916666666666666	APCE recall: 0.66666667	APCE f1: 0.72380952
+pair precision: 0.7	pair recall: 0.72916667	pair f1: 0.71428571
+triple precision: 0.624113475177305	triple recall: 0.61111111	triple f1: 0.61754386
+Epoch:126
+('Loss:', 798.5059719085693)
+('KL_Loss:', 688.9819305233916)
+aspect precision: 0.9381443298969072	aspect recall: 0.79824561	aspect f1: 0.86255924
+opinion precision: 0.9545454545454546	opinion recall: 0.85135135	opinion f1: 0.90000000
+APCE precision: 0.8390804597701149	APCE recall: 0.64035088	APCE f1: 0.72636816
+pair precision: 0.8392857142857143	pair recall: 0.65277778	pair f1: 0.73437500
+triple precision: 0.7297297297297297	triple recall: 0.56250000	triple f1: 0.63529412
+Epoch:127
+('Loss:', 787.6721653938293)
+('KL_Loss:', 678.1496101984707)
+aspect precision: 0.93	aspect recall: 0.81578947	aspect f1: 0.86915888
+opinion precision: 0.9014084507042254	opinion recall: 0.86486486	opinion f1: 0.88275862
+APCE precision: 0.8172043010752689	APCE recall: 0.66666667	APCE f1: 0.73429952
+pair precision: 0.7443609022556391	pair recall: 0.68750000	pair f1: 0.71480144
+triple precision: 0.6461538461538462	triple recall: 0.58333333	triple f1: 0.61313869
+Epoch:128
+('Loss:', 836.5678782463074)
+('KL_Loss:', 680.9465468931943)
+aspect precision: 0.9662921348314607	aspect recall: 0.75438596	aspect f1: 0.84729064
+opinion precision: 0.9411764705882353	opinion recall: 0.86486486	opinion f1: 0.90140845
+APCE precision: 0.8314606741573034	APCE recall: 0.64912281	APCE f1: 0.72906404
+pair precision: 0.7637795275590551	pair recall: 0.67361111	pair f1: 0.71586716
+triple precision: 0.6614173228346457	triple recall: 0.58333333	triple f1: 0.61992620
+Epoch:129
+('Loss:', 810.6004328727722)
+('KL_Loss:', 680.5588892778691)
+aspect precision: 0.9381443298969072	aspect recall: 0.79824561	aspect f1: 0.86255924
+opinion precision: 0.9142857142857143	opinion recall: 0.86486486	opinion f1: 0.88888889
+APCE precision: 0.8105263157894737	APCE recall: 0.67543860	APCE f1: 0.73684211
+pair precision: 0.7142857142857143	pair recall: 0.69444444	pair f1: 0.70422535
+triple precision: 0.6115107913669064	triple recall: 0.59027778	triple f1: 0.60070671
+best aspect epoch: 41	best aspect precision: 0.87288136	best aspect recall: 0.90350877	best aspect f1: 0.88793103
+best opinion epoch: 39	best opinion precision: 0.93055556	best opinion recall: 0.90540541	best opinion f1: 0.91780822
+best APCE epoch: 20	best APCE precision: 0.85567010	best APCE recall: 0.72807018	best APCE f1: 0.78672986
+best pair epoch: 99	best pair precision: 0.78358209	best pair recall: 0.72916667	best pair f1: 0.75539568
+best triple epoch: 34	best triple precision: 0.75925926	best triple recall: 0.56944444	best triple f1: 0.65079365
+Features build completed
+Evaluation on testset:

@@ -1,0 +1,96 @@
+ATT_SPAN_block_num=1
+Filter_Strategy=True
+Only_token_head=False
+RANDOM_SEED=2022
+accumulation_steps=1
+bert_feature_dim=768
+block_num=1
+dataset=14lap
+dataset_path=./datasets/ASTE-Data-V2-EMNLP2020/
+device=cpu
+do_lower_case=True
+drop_out=0.1
+embedding_dim4width=200
+epochs=5
+init_model=pretrained_models/bert-base-uncased
+init_vocab=pretrained_models/bert-base-uncased
+kl_loss=True
+kl_loss_mode=KLLoss
+kl_loss_weight=0.5
+learning_rate=1e-05
+max_seq_length=100
+max_span_length=8
+mode=train
+model_dir=savemodel/
+model_para_test=False
+muti_gpu=False
+order_input=True
+output_path=triples.json
+random_shuffle=0
+related_span_block_num=1
+related_span_underline=False
+span_generation=Max
+task_learning_rate=0.0001
+train_batch_size=16
+warm_up=0.1
+whether_warm_up=False
+开始加载测试集
+测试集加载完成
+开始加载训练与验证集
+训练集与验证集加载完成
+Epoch:0
+('Loss:', 51552.91375732422)
+('KL_Loss:', 565.9262442149252)
+aspect precision: 0.0	aspect recall: 0.00000000	aspect f1: 0.00000000
+opinion precision: 1.0	opinion recall: 0.10000000	opinion f1: 0.18181818
+APCE precision: 0.0	APCE recall: 0.00000000	APCE f1: 0.00000000
+pair precision: 0.0	pair recall: 0.00000000	pair f1: 0.00000000
+triple precision: 0.0	triple recall: 0.00000000	triple f1: 0.00000000
+Epoch:1
+('Loss:', 18346.17332458496)
+('KL_Loss:', 542.0107085725939)
+aspect precision: 0.25	aspect recall: 0.18181818	aspect f1: 0.21052632
+opinion precision: 1.0	opinion recall: 0.80000000	opinion f1: 0.88888889
+APCE precision: 0.25	APCE recall: 0.18181818	APCE f1: 0.21052632
+pair precision: 0.16666666666666666	pair recall: 0.16666667	pair f1: 0.16666667
+triple precision: 0.07142857142857142	triple recall: 0.05555556	triple f1: 0.06250000
+_________________________________________________________
+best model save
+_________________________________________________________
+Epoch:2
+('Loss:', 14547.860946655273)
+('KL_Loss:', 544.6412181995752)
+aspect precision: 0.42857142857142855	aspect recall: 0.27272727	aspect f1: 0.33333333
+opinion precision: 1.0	opinion recall: 0.90000000	opinion f1: 0.94736842
+APCE precision: 0.42857142857142855	APCE recall: 0.27272727	APCE f1: 0.33333333
+pair precision: 0.3076923076923077	pair recall: 0.22222222	pair f1: 0.25806452
+triple precision: 0.18181818181818182	triple recall: 0.11111111	triple f1: 0.13793103
+_________________________________________________________
+best model save
+_________________________________________________________
+Epoch:3
+('Loss:', 12723.944206237793)
+('KL_Loss:', 535.3966383984765)
+aspect precision: 0.42857142857142855	aspect recall: 0.27272727	aspect f1: 0.33333333
+opinion precision: 1.0	opinion recall: 0.90000000	opinion f1: 0.94736842
+APCE precision: 0.42857142857142855	APCE recall: 0.27272727	APCE f1: 0.33333333
+pair precision: 0.25	pair recall: 0.22222222	pair f1: 0.23529412
+triple precision: 0.14285714285714285	triple recall: 0.11111111	triple f1: 0.12500000
+Epoch:4
+('Loss:', 11438.212295532227)
+('KL_Loss:', 525.6235905796284)
+aspect precision: 0.42857142857142855	aspect recall: 0.27272727	aspect f1: 0.33333333
+opinion precision: 1.0	opinion recall: 0.90000000	opinion f1: 0.94736842
+APCE precision: 0.42857142857142855	APCE recall: 0.27272727	APCE f1: 0.33333333
+pair precision: 0.2727272727272727	pair recall: 0.16666667	pair f1: 0.20689655
+triple precision: 0.2727272727272727	triple recall: 0.16666667	triple f1: 0.20689655
+_________________________________________________________
+best model save
+_________________________________________________________
+Features build completed
+Evaluation on testset:
+aspect precision: 0.42857142857142855	aspect recall: 0.27272727	aspect f1: 0.33333333
+opinion precision: 1.0	opinion recall: 0.90000000	opinion f1: 0.94736842
+APCE precision: 0.42857142857142855	APCE recall: 0.27272727	APCE f1: 0.33333333
+pair precision: 0.2727272727272727	pair recall: 0.16666667	pair f1: 0.20689655
+triple precision: 0.2727272727272727	triple recall: 0.16666667	triple f1: 0.20689655

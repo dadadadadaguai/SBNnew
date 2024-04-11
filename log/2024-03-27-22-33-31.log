@@ -1,0 +1,45 @@
+ATT_SPAN_block_num=1
+Filter_Strategy=True
+Only_token_head=False
+RANDOM_SEED=2022
+accumulation_steps=1
+bert_feature_dim=768
+block_num=1
+dataset=res14
+dataset_path=./datasets/ASTE-Data-V2-EMNLP2020/
+device=cuda
+do_lower_case=True
+drop_out=0.1
+embedding_dim4width=200
+epochs=20
+init_model=pretrained_models/bert-base-uncased
+init_vocab=pretrained_models/bert-base-uncased
+kl_loss=True
+kl_loss_mode=KLLoss
+kl_loss_weight=0.5
+learning_rate=1e-05
+max_seq_length=100
+max_span_length=8
+mode=test
+model_dir=savemodel/
+model_para_test=False
+muti_gpu=False
+order_input=True
+output_path=triples.json
+random_shuffle=0
+related_span_block_num=1
+related_span_underline=False
+span_generation=Max
+task_learning_rate=0.0001
+train_batch_size=16
+warm_up=0.1
+whether_warm_up=False
+开始加载测试集
+测试集加载完成
+Features build completed
+Evaluation on testset:
+aspect precision: 0.975	aspect recall: 0.68421053	aspect f1: 0.80412371
+opinion precision: 0.9692307692307692	opinion recall: 0.85135135	opinion f1: 0.90647482
+APCE precision: 0.9473684210526315	APCE recall: 0.63157895	APCE f1: 0.75789474
+pair precision: 0.7777777777777778	pair recall: 0.58333333	pair f1: 0.66666667
+triple precision: 0.7592592592592593	triple recall: 0.56944444	triple f1: 0.65079365
