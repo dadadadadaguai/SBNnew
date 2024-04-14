@@ -59,10 +59,10 @@ if __name__ == "__main__":
     layers = 2
     is_bidirectional = True
     drop_rate = 0.5
-    batch_size = 16  # 批量大小，这里设置为 10
+    batch_size = 1  # 批量大小，这里设置为 1
     input_length = 20  # 输入序列长度，这里设置为 20
     num_directions = 2 if is_bidirectional else 1  # 如果是双向的话则为2，否则为1
-    hidden =torch.randn(layers * num_directions,1,hidden_dim)    # 初始化隐藏状态的形状
+    hidden =torch.randn(layers * num_directions,batch_size,hidden_dim)    # 初始化隐藏状态的形状
 
     tokens_tensor=torch.randn(16,100).to(device)
     attention_mask=torch.randn(16,100).to(device)
@@ -81,6 +81,7 @@ if __name__ == "__main__":
     # 待测试的文本
     text = "The drinks are a saving grace , but service staff , please , get over yourselves."
 
+
     # 使用 tokenizer 对文本进行处理，得到 token ids 和 attention mask
     encoded_input = tokenizer(text, padding='max_length', truncation=True, max_length=20, return_tensors='pt')
 
@@ -93,13 +94,30 @@ if __name__ == "__main__":
     attention_mask = attention_mask.long().to(device)
 
     # 使用之前加载的预训练模型 Bert
+    result=Bert(input_ids=tokens_tensor, attention_mask=attention_mask)
     h = Bert(input_ids=tokens_tensor, attention_mask=attention_mask)[0]
     h.to(device)
 
-    output, _ = lstm(h, hidden)
+    # >>> h0 = torch.randn(2, 3, 20)
+    # >>> c0 = torch.randn(2, 3, 20)
+
+    # Inputs: input, (h_0, c_0)
+    #     - **input** of shape `(seq_len, batch, input_size)`: tensor containing the features
+    #       of the input sequence.
+    #       The input can also be a packed variable length sequence.
+    #       See :func:`torch.nn.utils.rnn.pack_padded_sequence` or
+    #       :func:`torch.nn.utils.rnn.pack_sequence` for details.
+    #     - **h_0** of shape `(num_layers * num_directions, batch, hidden_size)`: tensor
+    #       containing the initial hidden state for each element in the batch.
+    #       If the LSTM is bidirectional, num_directions should be 2, else it should be 1.
+    #     - **c_0** of shape `(num_layers * num_directions, batch, hidden_size)`: tensor
+    #       containing the initial cell state for each element in the batch.
+    #
+    #       If `(h_0, c_0)` is not provided, both **h_0** and **c_0** default to zero.  #1*20*100
+    output, _ = lstm(h, (hidden,hidden))
     bert_lstm_output = lstm_dropout(output)
     bert_lstm_att_feature = bert_lstm_output
-    print(bert_lstm_att_feature.shape)
+    print(bert_lstm_att_feature.shape)  # [1, 20, 200]
 
 
 

@@ -134,9 +134,9 @@ class Metric():
                                                                                                     bert_tokens)
             pred_aspect, pred_opinion, pred_apce, pred_pairs, pred_triples, pred_spans = self.find_pred_triples(i, bert_spans,
                                                                                                     bert_tokens)
-
-            if len(gold_triples) < 5:
-                continue
+            #TODO
+            # if len(gold_triples) < 5:
+            #     continue
 
             reverse_aspect, reverse_opinion, reverse_apce, reverse_pairs, reverse_triples, reverse_spans = \
                 self.find_pred_reverse_triples(i, bert_spans, bert_tokens)
@@ -257,7 +257,7 @@ class Metric():
                     pred_opinion_length4.append(opinion_P)
                 elif len(opinion_length) >= 5:
                     pred_opinion_length5.append(opinion_P)
-
+            # print(i)
             gold_opinion_num_length1, pred_opinion_num_length1, correct_opinion_num_length1 = self.num_4_eval(
                 gold_opinion_length1, pred_opinion_length1, gold_opinion_num_length1, pred_opinion_num_length1,
                 correct_opinion_num_length1)
@@ -287,7 +287,7 @@ class Metric():
             F2 = open(self.args.dataset + 'opinion.json', 'w', encoding='utf-8')
             json.dump(opinion_text, F2, ensure_ascii=False, indent=4)
             F2.close()
-
+        #计算pre,recall,f1
         aspect_result_length1 = self.P_R_F1(gold_aspect_num_length1, pred_aspect_num_length1, correct_aspect_num_length1)
         aspect_result_length2 = self.P_R_F1(gold_aspect_num_length2, pred_aspect_num_length2,
                                             correct_aspect_num_length2)

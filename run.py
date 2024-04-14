@@ -2,10 +2,11 @@ import os
 import argparse
 import tqdm
 import torch
+from torch import nn as nn
 import torch.nn.functional as F
 from transformers import AdamW, BertModel, get_linear_schedule_with_warmup
 from models.data_BIO_loader import load_data, DataTterator
-from models.model import stage_2_features_generation, Step_1, Step_2_forward, Step_2_reverse, Loss
+from models.model import stage_2_features_generation, Step_1, Step_2_forward, Step_2_reverse, Loss, LSTMModel
 from models.Metric import Metric
 from models.eval_features import unbatch_data
 from log import logger
@@ -183,6 +184,7 @@ def eval(bert_model, step_1_model, step_2_forward, step_2_reverse, dataset, args
                 reverse_stage1_pred_opinion_sentiment_logit.append(reverse_pred_sentiment_ligits)
                 reverse_stage2_pred_aspect_result.append(torch.argmax(F.softmax(reverse_aspect_class_logits, dim=2), dim=2))
                 reverse_stage2_pred_aspect_sentiment_logit.append(F.softmax(reverse_aspect_class_logits, dim=2))
+            # print(j)
 
         gold_instances = [x for i in gold_instances for x in i]
         forward_pred_data = (forward_stage1_pred_aspect_result, forward_stage1_pred_aspect_with_sentiment,
@@ -197,6 +199,7 @@ def eval(bert_model, step_1_model, step_2_forward, step_2_reverse, dataset, args
 
         metric = Metric(args, forward_pred_result, reverse_pred_result, gold_instances)
         aspect_result, opinion_result, apce_result, pair_result, triplet_result = metric.score_triples()
+        #TODO
         # print('aspect precision:', aspect_result[0], "aspect recall: ", aspect_result[1], "aspect f1: ", aspect_result[2])
         # print('opinion precision:', opinion_result[0], "opinion recall: ", opinion_result[1], "opinion f1: ",
         #       opinion_result[2])
@@ -245,10 +248,16 @@ def train(args):
     logger.info('测试集加载完成')
     print('-------------------------------')
 
+    #加载模型
     Bert = BertModel.from_pretrained(args.init_model)
     bert_config = Bert.config
     Bert.to(args.device)
     bert_param_optimizer = list(Bert.named_parameters())
+
+    # TODO
+    lstm_model = LSTMModel(input_size=768, hidden_size=256, num_layers=2, num_directions=2)
+    lstm_model.to(args.device)
+
 
     step_1_model = Step_1(args, bert_config)
     step_1_model.to(args.device)
@@ -315,7 +324,14 @@ def train(args):
                 spans_aspect_tensor, spans_opinion_label_tensor, reverse_ner_label_tensor, reverse_opinion_tensor, \
                 reverse_aspect_label_tensor, related_spans_tensor, sentence_length = trainset.get_batch(j)
 
+                # Bert+LSTM+self+attention模型输出
                 bert_output = Bert(input_ids=tokens_tensor, attention_mask=attention_mask)
+                #TODO
+                h = bert_output[0]  # 获取最后一层输出
+                lstm_output = lstm_model(h)
+                bert_output.last_hidden_state=lstm_output+bert_output.last_hidden_state
+
+
                 aspect_class_logits, opinion_class_logits, spans_embedding, forward_embedding, reverse_embedding, \
                 cnn_spans_mask_tensor = step_1_model(
                                                                                       bert_output.last_hidden_state,
@@ -400,7 +416,7 @@ def train(args):
                 best_pairs_recall = pair_result[1]
                 best_pairs_epoch = i
 
-            if triplet_result[2] > best_triple_f1 and triplet_result[2] > 0.55:
+            if triplet_result[2] > best_triple_f1 and triplet_result[2] > 0.62:
                 model_path = args.model_dir +args.dataset +'_'+ str(triplet_result[2]) + '.pt'
                 state = {
                     "bert_model": Bert.state_dict(),
@@ -438,7 +454,9 @@ def train(args):
     logger.info("Evaluation on testset:")
 
     # model_path = args.model_dir + args.dataset+'_'+str(best_triple_f1) + '.pt'
-    model_path = args.model_dir +args.dataset +'_'+ str(0.6265060240963854) + '.pt'
+    model_path = args.model_dir + args.dataset+'_'+str(0.7448494453248812) + '.pt'
+    # model_path = args.model_dir +args.dataset +'_'+ str(0.6265060240963854) + '.pt'  #根据数据集进行修改
+    # model_path = args.model_dir + args.dataset + '_' + str(0.6486486486486486) + '.pt'
     if args.muti_gpu:
         state = torch.load(model_path)
     else:
@@ -446,6 +464,7 @@ def train(args):
         # state = load_with_single_gpu(model_path)
 
     Bert.load_state_dict(state['bert_model'])
+    # LSTMModel.load_state_dict(state['biLstm_model'])
     step_1_model.load_state_dict(state['step_1_model'])
     step2_forward_model.load_state_dict(state['step2_forward_model'])
     step2_reverse_model.load_state_dict(state['step2_reverse_model'])
@@ -467,7 +486,7 @@ def load_with_single_gpu(model_path):
 def main():
     parser = argparse.ArgumentParser(description="Train scrip")
     parser.add_argument('--model_dir', type=str, default="savemodel/", help='model path prefix')
-    parser.add_argument('--device', type=str, default="cpu", help='cuda or cpu')
+    parser.add_argument('--device', type=str, default="cuda", help='cuda or cpu')
     parser.add_argument("--init_model", default="pretrained_models/bert-base-uncased", type=str, required=False,help="Initial model.")
     parser.add_argument("--init_vocab", default="pretrained_models/bert-base-uncased", type=str, required=False,help="Initial vocab.")
 
@@ -481,16 +500,16 @@ def main():
     parser.add_argument("--learning_rate", type=float, default=1e-5)
     parser.add_argument("--accumulation_steps", type=int, default=1)
     parser.add_argument("--muti_gpu", default=False)
-    parser.add_argument('--epochs', type=int, default=130, help='training epoch number')
+    parser.add_argument('--epochs', type=int, default=120, help='training epoch number')
     parser.add_argument("--train_batch_size", default=16, type=int, help="batch size for training")
     parser.add_argument("--RANDOM_SEED", type=int, default=2022, help="")
     '''修改了数据格式'''
     parser.add_argument("--dataset_path", default="./datasets/ASTE-Data-V2-EMNLP2020/",
                         choices=["./datasets/BIO_form/", "./datasets/ASTE-Data-V2-EMNLP2020/"],
                         help="")
-    parser.add_argument("--dataset", default="lap14", type=str, choices=["lap14", "res14", "res15", "res16"],
+    parser.add_argument("--dataset", default="res14", type=str, choices=["lap14", "res14", "res15", "res16"],
                         help="specify the dataset")
-    parser.add_argument('--mode', type=str, default="train", choices=["train", "test"], help='option: train, test')
+    parser.add_argument('--mode', type=str, default="test", choices=["train", "test"], help='option: train, test')
     '''对相似Span进行attention'''
     # 分词中仅使用结果的首token
     parser.add_argument("--Only_token_head", default=False)
@@ -513,7 +532,7 @@ def main():
     # 选择Cross Attention中ATT块的个数
     parser.add_argument("--block_num", type=int, default=1, help="number of block")
     parser.add_argument("--output_path", default='triples.json')
-    #按照句子的顺序输入排序
+    # 按照句子的顺序输入排序
     parser.add_argument("--order_input", default=True, help="")
     '''随机化输入span排序'''
     parser.add_argument("--random_shuffle", type=int, default=0, help="")
@@ -522,6 +541,9 @@ def main():
     # 使用Warm up快速收敛
     parser.add_argument('--whether_warm_up', default=False)
     parser.add_argument('--warm_up', type=float, default=0.1)
+    # 使用LSTM双向  TODO
+    parser.add_argument('--is_bidirectional', default=True, help='LSTM是否使用双向')
+    parser.add_argument('--hidden_dim',default=100)
     args = parser.parse_args()
 
     for k,v in sorted(vars(args).items()):

@@ -10,6 +10,30 @@ from allennlp.nn.util import batched_index_select, batched_span_select
 import random
 import math
 
+
+# 定义LSTM模型
+class LSTMModel(nn.Module):
+    def __init__(self, input_size, hidden_size, num_layers, num_directions):
+        super(LSTMModel, self).__init__()
+        self.hidden_size = hidden_size
+        self.num_layers = num_layers
+        self.num_directions = num_directions
+        self.lstm = nn.LSTM(input_size, hidden_size, num_layers, bidirectional=(num_directions == 2))
+        # 定义线性层
+        self.linear_layer = nn.Linear(in_features=hidden_size*2, out_features=input_size)
+
+    def forward(self, x):
+        # 初始化隐藏状态
+        h_0 = torch.zeros(self.num_layers * self.num_directions, x.size(1), self.hidden_size).to(x.device)
+        c_0 = torch.zeros(self.num_layers * self.num_directions, x.size(1), self.hidden_size).to(x.device)
+
+        # LSTM前向传播
+        lstm_out, _ = self.lstm(x, (h_0, c_0))
+        # print("lstm_out shape:", lstm_out.shape)  # 添加此行打印语句
+        lstm_out=self.linear_layer(lstm_out)
+
+        return lstm_out
+
 def stage_2_features_generation(bert_feature, attention_mask, spans, span_mask, spans_embedding, spans_aspect_tensor,
                                 spans_opinion_tensor=None):
     # 对输入的aspect信息进行处理，去除掉无效的aspect span

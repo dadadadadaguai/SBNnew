@@ -3,6 +3,30 @@ import math
 import torch.nn as nn
 import numpy as np
 from transformers.activations import ACT2FN
+import torch.nn.functional as F
+
+class SelfAttention_New(torch.nn.Module):
+    def __init__(self, args):
+        super(SelfAttention,self).__init__()
+        self.args = args
+        self.linear_q = torch.nn.Linear(args.lstm_dim * 2, args.lstm_dim * 2)
+        self.w_query = torch.nn.Linear(args.lstm_dim * 2, args.lstm_dim)
+        self.w_value = torch.nn.Linear(args.lstm_dim * 2, args.lstm_dim)
+        self.v = torch.nn.Linear(args.lstm_dim, 1, bias=False)
+
+    def forward(self, query, value, mask):
+        attention_states = query
+        attention_states_T = value
+        attention_states_T = attention_states_T.permute([0, 2, 1])
+
+        weights=torch.bmm(attention_states, attention_states_T)
+        weights = weights.masked_fill(mask.unsqueeze(1).expand_as(weights)==0, float("-inf"))
+        attention = F.softmax(weights,dim=2)
+
+        merged=torch.bmm(attention, value)
+        merged=merged * mask.unsqueeze(2).float().expand_as(merged)
+
+        return merged
 
 class Dim_Four_Attention(nn.Module):
     def __init__(self, config):
